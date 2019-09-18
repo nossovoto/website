@@ -1,0 +1,91 @@
+$circle-size: 192px;
+
+.sobre {
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  color: rgb(240, 240, 240);
+}
+
+.sobre-box {
+  margin: 0 15%;
+}
+
+.sobre-box h1 {
+  text-align: center;
+}
+
+.sobre-box p {
+  text-align: left;
+}
+
+.sobre-servicos {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sobre-servicos-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+}
+
+.sobre-servicos-circle {
+  width: $circle-size;
+  height: $circle-size;
+  padding: 8px;
+  background-color: lightskyblue;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-servicos-block p {
+  margin-top: 16px;
+  text-align: center;
+  width: 90%;
+  height: 80px;
+}
+
+@media screen and (max-width: 1280px) {
+  .sobre-servicos-circle {
+    width: $circle-size * 0.9;
+    height: $circle-size * 0.9;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .sobre-servicos-circle {
+    width: $circle-size * 0.66;
+    height: $circle-size * 0.66;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .sobre-servicos {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sobre-servicos-circle {
+    width: $circle-size * 0.9;
+    height: $circle-size * 0.9;
+  }
+
+  .sobre-servicos-block p {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 512px) {
+}

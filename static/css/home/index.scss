@@ -1,0 +1,18 @@
+$padding-vert: 32px;
+$padding-hori: 128px;
+
+.home-container {
+  border-left: 2px solid darkblue;
+}
+
+@media screen and (max-width: 800px) {
+  .home-container {
+    padding: $padding-vert $padding-hori/2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-container {
+    padding: $padding-vert/2 $padding-hori/4;
+  }
+}

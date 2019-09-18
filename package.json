@@ -1,0 +1,43 @@
+{
+  "name": "website",
+  "version": "0.1.0",
+  "description": "Website nossovoto - Criando a ponte entre a politica e o cidadão.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nossovoto/website.git"
+  },
+  "keywords": [
+    "politica",
+    "senado",
+    "camara",
+    "liberdade",
+    "democracia",
+    "cidadão",
+    "lei",
+    "transparência"
+  ],
+  "author": "Cleber Oliveira <cleberw3b@gmail.com> (https://github.com/Cleberw3b)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nossovoto/website/issues"
+  },
+  "homepage": "https://github.com/nossovoto/website#readme",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^9.0.5",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.5.3",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-glide": "^3.2.0"
+  }
+}
