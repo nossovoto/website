@@ -2,7 +2,7 @@ import "../../static/css/home/casas.scss";
 
 const Casas = () => (
   <section className="casas">
-    <h2>O legistalivo é complexo e pouco informativo</h2>
+    <h1>O legistalivo é complexo e pouco informativo</h1>
     <p>
       Nosso objetivo é acompanhar de perto tudo que acontece no Senado Federal e
       na Câmara de Deputados Federais, como se o cidadão estivesse presente em

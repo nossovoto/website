@@ -8,6 +8,7 @@ const Layout = props => (
     <style jsx global>{`
       body {
         margin: 0;
+        font-family: "Bebas Neue", sans-serif;
       }
     `}</style>
     <Nav />

@@ -8,7 +8,7 @@ $image-crop-size: 386px;
   align-items: center;
 }
 
-.casas h2 {
+.casas h1 {
   font-size: 40px;
   margin-block-end: 0.23em;
   text-align: center;
@@ -17,10 +17,11 @@ $image-crop-size: 386px;
 .casas p {
   width: 70%;
   text-align: center;
+  font-size: 24px;
 }
 
 .casas-image-container {
-  margin-top: 64px;
+  margin-top: 32px;
   display: flex;
   flex-direction: row;
 }
@@ -35,7 +36,7 @@ $image-crop-size: 386px;
 }
 
 .casas-image-block h2 {
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .casas-image-crop {
@@ -61,13 +62,13 @@ $image-crop-size: 386px;
 }
 
 @media screen and (max-width: 1080px) {
-  .casas h2 {
+  .casas h1 {
     font-size: 32px;
   }
 
   .casas p {
     width: 80%;
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .casas-image-block {
@@ -80,17 +81,21 @@ $image-crop-size: 386px;
   }
 
   .casas-image-block h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 
 @media screen and (max-width: 720px) {
-  .casas h2 {
-    font-size: 24px;
+  .casas {
+    margin-top: 0;
+  }
+
+  .casas h1 {
+    font-size: 28px;
   }
 
   .casas p {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .casas-image-container {

@@ -1,10 +1,11 @@
 $circle-size: 192px;
 
 .sobre {
-  margin: 32px 0;
+  margin: 32px auto;
+  padding: 32px 0;
   display: flex;
   flex-direction: column;
-  background-color: blue;
+  background-color: #16518c;
   color: rgb(240, 240, 240);
 }
 
@@ -14,10 +15,15 @@ $circle-size: 192px;
 
 .sobre-box h1 {
   text-align: center;
+  margin-bottom: 40px;
+  font-size: 24px;
 }
 
 .sobre-box p {
-  text-align: left;
+  margin: 24px auto;
+  width: calc(100% - 64px);
+  text-align: justify;
+  font-size: 18px;
 }
 
 .sobre-servicos {
@@ -39,7 +45,7 @@ $circle-size: 192px;
   width: $circle-size;
   height: $circle-size;
   padding: 8px;
-  background-color: lightskyblue;
+  background-color: #237ed9;
   border-radius: 50%;
   box-shadow: 1px 1px 1px black;
   display: flex;
@@ -77,6 +83,14 @@ $circle-size: 192px;
     align-items: center;
   }
 
+  .sobre-servicos-block {
+    width: auto;
+  }
+
+  .sobre-box p {
+    width: calc(100% - 32px);
+  }
+
   .sobre-servicos-circle {
     width: $circle-size * 0.9;
     height: $circle-size * 0.9;
@@ -84,6 +98,7 @@ $circle-size: 192px;
 
   .sobre-servicos-block p {
     height: auto;
+    width: 90%;
   }
 }
 

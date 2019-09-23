@@ -1,9 +1,9 @@
-$padding-vert: 64px;
+$padding-vert: 32px;
 $padding-hori: 256px;
 $image-square: 320px;
 
 .why {
-  margin: $padding-vert 0 $padding-vert/2 0;
+  margin: $padding-vert 0;
   padding: 0 $padding-hori;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,7 @@ $image-square: 320px;
 }
 
 .why-description {
+  margin-left: -16px;
   width: 60%;
   text-align: justify;
 }
@@ -26,11 +27,13 @@ $image-square: 320px;
 }
 
 .why-description h3 {
+  font-size: 20px;
   line-height: 2;
-  width: 75%;
+  width: 80%;
 }
 
 .why-description p {
+  font-size: 16px;
   line-height: 1.6;
   width: 90%;
 }
@@ -62,7 +65,7 @@ $image-square: 320px;
   display: inline-block;
   padding: 6px 12px;
   margin-top: 64px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.42857143;
   text-align: center;
@@ -81,8 +84,8 @@ $image-square: 320px;
   text-decoration: none;
 
   color: white;
-  background-color: rgb(52, 49, 194);
-  border-color: rgb(52, 49, 194);
+  background-color: #237ed9;
+  border-color: #237ed9;
 }
 
 @media screen and (max-width: 1280px) {
@@ -117,6 +120,10 @@ $image-square: 320px;
   .why-description p {
     width: 80%;
   }
+
+  .why-button {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -130,6 +137,7 @@ $image-square: 320px;
   }
 
   .why-description {
+    margin: 0 auto;
     width: 90%;
   }
 
@@ -165,6 +173,7 @@ $image-square: 320px;
   .why-image {
     margin-top: 16px;
   }
+
   .why-description h3,
   .why-description p {
     width: 100%;
