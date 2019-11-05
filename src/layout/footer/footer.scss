@@ -1,0 +1,99 @@
+.footer {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li {
+  padding-top: 8px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.footer a:hover,
+.footer a:focus {
+  text-decoration: underline;
+}
+
+.widget {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-nossovoto {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nossovoto img {
+  width: 50%;
+}
+
+.footer-nossovoto img.footer-logo {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+}
+
+.footer-text {
+  padding: 16px;
+  width: 90%;
+}
+
+.footer-empresa,
+.footer-comunidade,
+.footer-ajuda {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 0 16px;
+}
+
+.footer-social-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.footer-social-box > a {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.footer > small {
+  text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+  .footer {
+    padding: 24px 12px;
+  }
+  .widget {
+    flex-direction: column;
+  }
+
+  .footer-nossovoto,
+  .footer-empresa,
+  .footer-comunidade,
+  .footer-ajuda {
+    width: 100%;
+  }
+
+  .footer-social-box {
+    margin-top: 32px;
+  }
+}

@@ -1,40 +1,46 @@
 const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
 const sass = require("@zeit/next-sass");
-const webpack = require("webpack");
-const {
-  PHASE_PRODUCTION_BUILD,
-  PHASE_PRODUCTION_SERVER,
-  PHASE_DEVELOPMENT_SERVER,
-  PHASE_EXPORT
-} = require("next-server/constants");
+const env = process.env.NODE_ENV;
+const isDevelopment = env === "development";
+const isProduction = env === "production";
+const isTest = env === "test";
 
-const enviroment = {
-  MY_SECRET_KEY: process.env.MY_SECRET_KEY
+console.log("-------------------------------------");
+console.log("");
+console.log("     Running in " + env);
+console.log("");
+console.log("-------------------------------------");
+
+if (isDevelopment) {
+  require("dotenv").config();
+}
+
+var envVariables = {
+  TEST: process.env.TEST_ENV,
+  ENVIRONMENT: process.env.NODE_ENV
 };
 
 const nextConfig = {
   distDir: "build",
-  webpack: (config, options) => {
-    // modify the `config` here
-
-    return config;
-  },
-  env: enviroment
+  target: "serverless",
+  env: envVariables
 };
 
-module.exports = withPlugins(
+module.exports = withPlugins([
   [
-    [
-      optimizedImages,
-      {
-        /* config for next-optimized-images */
-        optimizeImages: false
-      }
-    ],
-    [sass, {}]
-
-    // your other plugins here
+    optimizedImages,
+    {
+      /* config for next-optimized-images */
+      optimizeImages: false
+    }
   ],
-  nextConfig
-);
+  [
+    sass,
+    {
+      /* config for sass */
+    }
+  ]
+  // your other plugins here
+  // nextConfig
+]);

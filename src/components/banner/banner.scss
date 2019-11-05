@@ -1,0 +1,14 @@
+.banner {
+  background: url("/static/images/banner_home_nossovoto.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 420px;
+}
+
+@media screen and (max-width: 720px) {
+  .banner {
+    height: 210px;
+  }
+}
