@@ -37,7 +37,7 @@
   flex-direction: column;
 }
 
-.footer-nossovoto img {
+.footer-nossovoto > img {
   width: 50%;
 }
 
@@ -90,7 +90,7 @@
   .footer-empresa,
   .footer-comunidade,
   .footer-ajuda {
-    width: 100%;
+    width: calc(100% - 24px);
   }
 
   .footer-social-box {

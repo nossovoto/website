@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./slide_show.scss";
 import Link from "next/link";
 import { formatDate } from "../../../public/js/util";
+import "./slideShow.scss";
 
 class SlideShow extends Component {
   constructor(props) {

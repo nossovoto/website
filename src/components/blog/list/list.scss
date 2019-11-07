@@ -43,6 +43,12 @@
 
 .blog-post-list-content > h1 {
   margin: 10px 0 5px 0;
+  font-size: 28px;
+}
+
+.blog-post-list-content > span {
+  overflow: hidden;
+  max-height: 70px;
 }
 
 .blog-post-list-content-extra {
@@ -51,13 +57,31 @@
   left: 24px;
 }
 
-.blog-post-list-content a {
+.blog-post-list-content-extra > a {
   color: blue;
   font-weight: bold;
+}
+
+.blog-posts-list-after {
+  display: none;
 }
 
 @media screen and (max-width: 720px) {
   .blog-posts-list {
     width: 90vw;
+  }
+
+  .blog-post-list-content > span {
+    max-height: 70px;
+  }
+
+  .blog-post-list-content > h1 {
+    font-size: 26px;
+  }
+
+  .blog-posts-list-after {
+    display: block;
+    width: 100vw;
+    border-bottom: 3px solid darkblue;
   }
 }

@@ -1,11 +1,11 @@
 import Link from "next/link";
-import "./footer.scss";
 import InstagramIcon from "../../../public/assets/icons/instagram-icon";
 import LinkedinIcon from "../../../public/assets/icons/linkedin-icon";
 import TwitterIcon from "../../../public/assets/icons/twitter-icon";
 import FacebookIcon from "../../../public/assets/icons/facebook-icon";
 import BugReport from "../../components/bugReport/bugReport";
 import BeAWrighter from "../../components/beAWrighter/beAWrighter";
+import "./footer.scss";
 
 const Footer = () => (
   <footer className="footer">

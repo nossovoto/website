@@ -14,6 +14,7 @@ const PostList = ({ posts }) => {
   });
 
   return (
+    <>
     <div className="blog-posts-list">
       {posts.map(post => {
         let data = formatDate(post.createdAt);
@@ -41,6 +42,9 @@ const PostList = ({ posts }) => {
         );
       })}
     </div>
+    <div className="blog-posts-list-after"></div>
+    </>
+
   );
 };
 

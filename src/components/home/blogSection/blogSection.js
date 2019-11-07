@@ -1,5 +1,5 @@
-import SlideShow from "../../slide-show/slide_show";
-import "./blog-section.scss";
+import SlideShow from "../../slideShow/slideShow";
+import "./blogSection.scss";
 
 const BlogSection = ({ posts }) => (
   <section className="blog-section">
