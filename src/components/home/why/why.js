@@ -19,7 +19,11 @@ const Why = () => (
         </p>
       </div>
       <div className="why-image">
-        <img src="/static/images/abismo.png" />
+      <picture>
+        <source srcSet="/static/images/abismo.webp" type="image/webp"/>
+        <source srcSet="/static/images/abismo.jpg" type="image/jpg"/> 
+        <img src="/static/images/abismo.jpg" alt="Abismo"/>
+      </picture>
       </div>
     </div>
     <div className="why-button">Acesse agora, se informe e dê sua opinião</div>

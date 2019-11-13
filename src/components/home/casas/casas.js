@@ -11,13 +11,21 @@ const Casas = () => (
     <div className="casas-image-container">
       <div className="casas-image-block">
         <div className="casas-image-crop">
-          <img src="/static/images/senado1_home_nossovoto.jpg" />
+          <picture>
+            <source srcSet="/static/images/senado.webp" type="image/webp" />
+            <source srcSet="/static/images/senado.jpg" type="image/jpg" />
+            <img src="/static/images/senado.jpg" alt="Camara" />
+          </picture>
         </div>
         <h2>SENADO</h2>
       </div>
       <div className="casas-image-block">
         <div className="casas-image-crop">
-          <img src="/static/images/camara3_home_nossovoto.jpeg" />
+          <picture>
+            <source srcSet="/static/images/camara.webp" type="image/webp" />
+            <source srcSet="/static/images/camara.jpeg" type="image/jpeg" />
+            <img src="/static/images/camara.jpeg" alt="Camara" />
+          </picture>
         </div>
         <h2>CÂMARA</h2>
       </div>

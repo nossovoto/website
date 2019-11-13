@@ -53,7 +53,7 @@ class SlideShow extends Component {
         <div className="slideshow-container">
           {this.state.posts.map(post => (
             <Link
-              href="/post/[id]"
+              href="/post/[slug]"
               as={`/post/${post.slug}`}
               key={post.index}
               passHref

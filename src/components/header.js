@@ -4,12 +4,6 @@ const Header = props => (
   <Head>
     <meta name="author" content="CleberW3b - Cléber Oliveira" key="author" />
     <title>{props.title ? props.title : "nossovoto"}</title>
-    <link
-      disabled
-      rel="stylesheet"
-      type="text/css"
-      href="//fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,900"
-    />
     {props.extra_meta
       ? props.extra_meta.map(ex_meta => (
           <meta
