@@ -1,7 +1,7 @@
 import { useState, useLayoutEffect } from "react";
 import { throttle } from "../../public/js/util";
 
-const useHeightToTop = () => {
+const useHeightToTop = (updateInterval = 200) => {
   const isClient = typeof window === "object";
 
   function getHeightToTop() {
@@ -17,7 +17,7 @@ const useHeightToTop = () => {
 
     const handleScroll = throttle(() => {
       setHeightToTop(getHeightToTop());
-    }, 500);
+    }, updateInterval);
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

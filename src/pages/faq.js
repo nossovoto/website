@@ -27,7 +27,7 @@ const FAQ = ({ initialProps }) => (
   </>
 );
 
-FAQ.getInitialProps = async function() {
+FAQ.getInitialProps = async () => {
   return { initialProps: {} };
 };
 

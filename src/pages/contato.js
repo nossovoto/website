@@ -27,7 +27,7 @@ const TermsAndServices = ({ initialProps }) => (
   </>
 );
 
-TermsAndServices.getInitialProps = async function() {
+TermsAndServices.getInitialProps = async () => {
   return { initialProps: {} };
 };
 

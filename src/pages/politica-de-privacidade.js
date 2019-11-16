@@ -27,7 +27,7 @@ const PrivacyPolicy = ({ initialProps }) => (
   </>
 );
 
-PrivacyPolicy.getInitialProps = async function() {
+PrivacyPolicy.getInitialProps = async () => {
   return { initialProps: {} };
 };
 

@@ -38,7 +38,7 @@ const Home = ({ posts }) => {
   );
 };
 
-Home.getInitialProps = async function() {
+Home.getInitialProps = async () => {
   const posts = await getPosts();
   return { posts: posts };
 };

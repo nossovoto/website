@@ -27,9 +27,8 @@ const Blog = ({ posts, currentUrl }) => (
   </>
 );
 
-Blog.getInitialProps = async function(context) {
-  const req = context.req;
-  const host = req ? req.headers.host : location.host;
+Blog.getInitialProps = async ({ req }) => {
+  const host = req ? req.headers.host : "nossovoto.com.br";
   const path = req ? req.url : "/blog";
   const posts = await getPosts();
   const currentUrl = "https://" + host + path;

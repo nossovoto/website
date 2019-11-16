@@ -27,7 +27,7 @@ const Sobre = ({ initialProps }) => (
   </>
 );
 
-Sobre.getInitialProps = async function() {
+Sobre.getInitialProps = async () => {
   return { initialProps: {} };
 };
 

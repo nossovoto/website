@@ -1,8 +1,21 @@
+.blog-post-page {
+  display: flex;
+  flex-direction: row;
+}
+
 .blog-post-container {
-  margin-left: 20vw;
   border-left: 3px solid darkblue;
   padding: 32px 64px;
   width: 60vw;
+}
+
+.blog-post-social {
+  position: relative;
+  width: 15vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 64px 0;
 }
 
 .blog-post-container > h1 {
@@ -52,19 +65,21 @@
 
 @media screen and (max-width: 720px) {
   .blog-post-container {
-    margin-left: 10vw;
     border-left: 3px solid darkblue;
     padding: 24px;
     width: 75vw;
+  }
+
+  .blog-post-social {
+    width: 10vw;
   }
 
   .blog-post-author-separator {
     margin-left: 8vw;
     width: calc(92vw - 32px);
   }
-  
+
   .blog-post-author {
     margin-left: 11vw;
   }
-
 }
