@@ -40,7 +40,7 @@ module.exports = withPlugins([
     {
       /* config for sass */
     }
-  ]
+  ],
   // your other plugins here
-  // nextConfig
+  nextConfig
 ]);

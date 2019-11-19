@@ -12,4 +12,6 @@ COPY . .
 
 EXPOSE 3000
 
+RUN npm run buil
+
 CMD [ "npm", "start" ] // start server inside container
