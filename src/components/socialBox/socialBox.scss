@@ -2,6 +2,9 @@
   position: -webkit-sticky;
   position: sticky;
   top: 24%;
+  display: inline-flex;
+  flex-direction: column;
+  place-items: center;
 }
 
 .social-box-fixed a {
@@ -10,4 +13,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+  .social-box-fixed > h3 {
+    display: none;
+  }
 }

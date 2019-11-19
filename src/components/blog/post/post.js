@@ -1,5 +1,6 @@
 import "./post.scss";
 import SocialBox from "../../socialBox/socialBox";
+import { formatDate } from "../../../../public/js/util";
 
 const PostContainer = ({ post, currentUrl }) => (
   <>
@@ -24,7 +25,7 @@ const PostContainer = ({ post, currentUrl }) => (
     <div className="blog-post-author">
       <div className="blog-post-author-img"></div>
       <div className="blog-post-author-name">
-        Escrito por <a>{post.author}</a>
+        Escrito por <a>{post.author}</a> em {formatDate(post.createdAt)}
       </div>
     </div>
   </>

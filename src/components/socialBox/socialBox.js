@@ -29,6 +29,7 @@ const SocialBox = ({ currentUrl }) => {
 
   return (
     <div className="social-box-fixed">
+      <h3>Compartilhe</h3>
       <div className="social-box-fixed-whatsapp">
         <a href={links.whatsapp}>
           <WhatsappIcon height={35} width={35} />
