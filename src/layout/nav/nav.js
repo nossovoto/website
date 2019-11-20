@@ -23,11 +23,9 @@ const Nav = () => {
             <a className={router.pathname === "/blog" ? "active" : ""}>Blog</a>
           </Link>
           <div className="nav-separator"> </div>
-          <Link href="/nossovoto">
-            <a className={router.pathname === "/nossovoto" ? "active" : ""}>
-              nossovoto
-            </a>
-          </Link>
+          <a href="https://app.nossovoto.com.br" target="_blank">
+            nossovoto
+          </a>
         </div>
         <div className="quebra-logo"></div>
       </div>
