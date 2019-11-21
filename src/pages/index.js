@@ -13,13 +13,12 @@ const title = "nossovoto";
 
 const keywords = {
   name: "keywords",
-  content:
-    "politica, senado, camara dos deputados, governo, cidadão, direito, constituição"
+  content: "home, nossovoto, politica, congresso nacional, brasil, câmara federal, senado federal, lei, leis"
 };
 
 const description = {
   name: "description",
-  content: "Criando a ponte entre o governo e o cidadão"
+  content: "O nossovoto aproxima o cidadão da política brasileira, disponibilizando tudo o que ocorre no Senado Federal e na Câmara dos Deputados Federais."
 };
 
 const extra_meta = [keywords, description];

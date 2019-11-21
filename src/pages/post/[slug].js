@@ -2,9 +2,15 @@ import BlogBanner from "../../components/blog/banner/banner";
 import PostContainer from "../../components/blog/post/post";
 import { getPost } from "../../../public/js/getPosts";
 import draftToHtml from "draftjs-to-html";
+import Head from 'next/head'
 
 const Post = ({ post, currentUrl }) => (
   <>
+    {console.log(post)}
+    <Head>
+      <meta name="keywords" content={post.keywords} key="keywords" />
+      <meta name="description" content={post.title} key="description" />
+    </Head>
     <BlogBanner />
     <PostContainer post={post} currentUrl={currentUrl} />
   </>

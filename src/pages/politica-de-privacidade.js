@@ -8,13 +8,12 @@ const title = "nossovoto - Politica de Privacidade";
 
 const keywords = {
   name: "keywords",
-  content:
-    "politica, senado, camara dos deputados, governo, cidadão, direito, constituição"
+  content: "nossovoto, politica, politica de privacidade"
 };
 
 const description = {
   name: "description",
-  content: "Criando a ponte entre o governo e o cidadão"
+  content: "Saiba mais sobre as práticas e a Política de Privacidade do nossovoto, além dos tipos de informação que o nossovoto recebe e como elas são usadas."
 };
 
 const extra_meta = [keywords, description];

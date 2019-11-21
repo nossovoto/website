@@ -8,13 +8,12 @@ const title = "nossovoto - FAQ";
 
 const keywords = {
   name: "keywords",
-  content:
-    "politica, senado, camara dos deputados, governo, cidadão, direito, constituição"
+  content: "perguntas, FAQ, nossovoto, politica, duvidas, congresso"
 };
 
 const description = {
   name: "description",
-  content: "Criando a ponte entre o governo e o cidadão"
+  content: "Tem alguma pergunta? Consulte nosso canal de dúvidas e se mesmo assim não achar as respostas não deixe de nos contatar no contato@nossovoto.com.br"
 };
 
 const extra_meta = [keywords, description];

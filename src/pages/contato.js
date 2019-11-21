@@ -8,13 +8,12 @@ const title = "nossovoto - Contato";
 
 const keywords = {
   name: "keywords",
-  content:
-    "contato, politica, senado, camara dos deputados, governo, cidadão, direito, constituição"
+  content: "contato, nossovoto, politica"
 };
 
 const description = {
   name: "description",
-  content: "Criando a ponte entre o governo e o cidadão"
+  content: "Sua opinião é muito importante para nós. Entre em contato conosco pelo site ou pelo e-mail contato@nossovoto.com.br. Estamos a disposição para responder seus questionamentos, ouvir suas críticas e sugestões."
 };
 
 const extra_meta = [keywords, description];

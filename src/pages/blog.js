@@ -7,14 +7,12 @@ const title = "nossovoto - Blog";
 
 const keywords = {
   name: "keywords",
-  content:
-    "blog, politica, senado, camara dos deputados, governo, cidadão, direito, constituição"
+  content: "blog, nossovoto, educação politica, politica, educação"
 };
 
 const description = {
   name: "description",
-  content:
-    "Conheça o blog do nossovoto e mantenha-se informado com o melhor conteúdo sobre política."
+  content: "Aprenda o funcionamento da Política Brasileira sem juridiquês. Aqui nós falamos a sua língua. Sem enrolação e direto ao ponto."
 };
 
 const extra_meta = [keywords, description];
