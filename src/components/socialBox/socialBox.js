@@ -1,4 +1,3 @@
-import "./socialBox.scss";
 import WhatsappIcon from "../../../public/assets/icons/whatsapp-icon";
 import LinkedinIcon from "../../../public/assets/icons/linkedin-icon";
 import TwitterIcon from "../../../public/assets/icons/twitter-icon";
@@ -6,6 +5,8 @@ import FacebookIcon from "../../../public/assets/icons/facebook-icon";
 import MessengerIcon from "../../../public/assets/icons/messenger-icon";
 import CopylinkIcon from "../../../public/assets/icons/copylink-icon";
 import RedditIcon from "../../../public/assets/icons/reddit-icon";
+import useClipboard from "react-use-clipboard";
+import "./socialBox.scss";
 
 const dummyLinks = {
   whatsapp: "whatsapp://send?text=",
@@ -26,6 +27,9 @@ const SocialBox = ({ currentUrl }) => {
   links.reddit = dummyLinks.reddit + currentUrl;
   links.twitter = dummyLinks.twitter + currentUrl;
   links.copylink = dummyLinks.copylink + currentUrl;
+  const [isCopied, setCopied] = useClipboard(currentUrl, {
+    successDuration: 2000
+  });
 
   return (
     <div className="social-box-fixed">
@@ -40,11 +44,11 @@ const SocialBox = ({ currentUrl }) => {
           <LinkedinIcon height={35} width={35} />
         </a>
       </div>
-      <div className="social-box-fixed-facebook">
+      {/* <div className="social-box-fixed-facebook">
         <a href={links.facebook} target="_blank">
           <FacebookIcon height={35} width={35} />
         </a>
-      </div>
+      </div> */}
       <div className="social-box-fixed-message">
         <a href={links.messenger}>
           <MessengerIcon height={35} width={35} />
@@ -60,11 +64,10 @@ const SocialBox = ({ currentUrl }) => {
           <TwitterIcon height={35} width={35} />
         </a>
       </div>
-      <div className="social-box-fixed-copylink">
-        <a href={links.copylink}>
-          <CopylinkIcon height={35} width={35} />
-        </a>
+      <div className={"social-box-fixed-copylink"} onClick={setCopied}>
+        <CopylinkIcon height={35} width={35} />
       </div>
+      {isCopied && "Link copiado!"}
     </div>
   );
 };

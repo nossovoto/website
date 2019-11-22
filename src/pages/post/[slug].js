@@ -6,7 +6,6 @@ import Head from 'next/head'
 
 const Post = ({ post, currentUrl }) => (
   <>
-    {console.log(post)}
     <Head>
       <meta name="keywords" content={post.keywords} key="keywords" />
       <meta name="description" content={post.title} key="description" />
@@ -19,7 +18,7 @@ const Post = ({ post, currentUrl }) => (
 Post.getInitialProps = async ({ req, query }) => {
   const { slug } = query;
   const host = req ? req.headers.host : "nossovoto.com.br";
-  const path = req ? req.url : "/slug";
+  const path = req ? req.url : "/blog/";
   const currentUrl = "https://" + host + path + (req ? "" : slug);
   let post = await getPost(slug);
   post.text = draftToHtml(JSON.parse(post.text));
