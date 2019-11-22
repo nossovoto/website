@@ -6,6 +6,8 @@
   flex-direction: column;
   place-items: center;
 }
+
+.social-box-fixed-facebook,
 .social-box-fixed-copylink,
 .social-box-fixed a {
   width: 50px;
@@ -15,6 +17,7 @@
   align-items: center;
 }
 
+.social-box-fixed-facebook,
 .social-box-fixed-copylink {
   cursor: pointer;
 }

@@ -7,27 +7,32 @@ import CopylinkIcon from "../../../public/assets/icons/copylink-icon";
 import RedditIcon from "../../../public/assets/icons/reddit-icon";
 import useClipboard from "react-use-clipboard";
 import { FacebookProvider, Share } from 'react-facebook';
+import { useState, useEffect } from 'react'
 import "./socialBox.scss";
 
-const dummyLinks = {
-  whatsapp: "whatsapp://send?text=",
-  linkedin: "https://www.linkedin.com/shareArticle?mini=true&url=",
-  messenger: "fb-messenger://share/?link=",
-  reddit: "http://www.reddit.com/submit?url=",
-  twitter: "https://twitter.com/intent/tweet?text=",
+const generateLinks = (currentUrl) => {
+  return {
+    whatsapp: "whatsapp://send?text=" + currentUrl,
+    linkedin: "https://www.linkedin.com/shareArticle?mini=true&url=" + currentUrl,
+    messenger: "fb-messenger://share/?link=" + currentUrl,
+    reddit: "http://www.reddit.com/submit?url=" + currentUrl,
+    twitter: "https://twitter.com/intent/tweet?text=" + currentUrl
+  }
 };
 
 const SocialBox = ({ currentUrl }) => {
-  let links = {};
-  links.whatsapp = dummyLinks.whatsapp + currentUrl;
-  links.linkedin = dummyLinks.linkedin + currentUrl;
-  links.messenger = dummyLinks.messenger + currentUrl;
-  links.reddit = dummyLinks.reddit + currentUrl;
-  links.twitter = dummyLinks.twitter + currentUrl;
-
-  const [isCopied, setCopied] = useClipboard(currentUrl, {
+  let links = generateLinks(currentUrl);
+  const [url, setUrl] = useState(currentUrl);
+  const [isCopied, setCopied] = useClipboard(url, {
     successDuration: 2000
   });
+
+  useEffect(() => {
+    setUrl(currentUrl);
+    return () => {
+      setUrl("https://nossovoto.com.br");
+    };
+  }, [currentUrl])
 
   return (
     <div className="social-box-fixed">
@@ -43,12 +48,10 @@ const SocialBox = ({ currentUrl }) => {
         </a>
       </div>
       <FacebookProvider appId="674147143115564">
-        <Share href={currentUrl}>
+        <Share href={url}>
           {({ handleClick, loading }) => (
             <div className="social-box-fixed-facebook" onClick={handleClick}>
-              <a href={links.facebook} target="_blank">
-                <FacebookIcon height={35} width={35} />
-              </a>
+              <FacebookIcon height={35} width={35} />
             </div>
           )}
         </Share>
