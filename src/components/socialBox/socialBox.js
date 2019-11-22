@@ -1,13 +1,11 @@
 import WhatsappIcon from "../../../public/assets/icons/whatsapp-icon";
 import LinkedinIcon from "../../../public/assets/icons/linkedin-icon";
 import TwitterIcon from "../../../public/assets/icons/twitter-icon";
-import FacebookIcon from "../../../public/assets/icons/facebook-icon";
+import FaceBookShare from "./useFacebookShare";
 import MessengerIcon from "../../../public/assets/icons/messenger-icon";
 import CopylinkIcon from "../../../public/assets/icons/copylink-icon";
 import RedditIcon from "../../../public/assets/icons/reddit-icon";
 import useClipboard from "react-use-clipboard";
-import { FacebookProvider, Share } from 'react-facebook';
-import { useState, useEffect } from 'react'
 import "./socialBox.scss";
 
 const generateLinks = (currentUrl) => {
@@ -22,17 +20,9 @@ const generateLinks = (currentUrl) => {
 
 const SocialBox = ({ currentUrl }) => {
   let links = generateLinks(currentUrl);
-  const [url, setUrl] = useState(currentUrl);
-  const [isCopied, setCopied] = useClipboard(url, {
+  const [isCopied, setCopied] = useClipboard(currentUrl, {
     successDuration: 2000
   });
-
-  useEffect(() => {
-    setUrl(currentUrl);
-    return () => {
-      setUrl("https://nossovoto.com.br");
-    };
-  }, [currentUrl])
 
   return (
     <div className="social-box-fixed">
@@ -47,15 +37,7 @@ const SocialBox = ({ currentUrl }) => {
           <LinkedinIcon height={35} width={35} />
         </a>
       </div>
-      <FacebookProvider appId="674147143115564">
-        <Share href={url}>
-          {({ handleClick, loading }) => (
-            <div className="social-box-fixed-facebook" onClick={handleClick}>
-              <FacebookIcon height={35} width={35} />
-            </div>
-          )}
-        </Share>
-      </FacebookProvider>
+      <FaceBookShare url_to_share={currentUrl} />
       <div className="social-box-fixed-message">
         <a href={links.messenger}>
           <MessengerIcon height={35} width={35} />
