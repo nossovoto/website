@@ -4,11 +4,25 @@ import { getPost } from "../../../public/js/getPosts";
 import draftToHtml from "draftjs-to-html";
 import Head from 'next/head'
 
+const facebookProperties = (post, currentUrl) => {
+  return [
+    { property: "og:url", content: currentUrl },
+    { property: "og:type", content: "article" },
+    { property: "og:title", content: post.title },
+    { property: "og:description", content: post.text.substring(0, 180) },
+    { property: "og:image", content: post.thumbnail },
+    { property: "og:locale", content: "pt_BR" }
+  ]
+}
+
 const Post = ({ post, currentUrl }) => (
   <>
     <Head>
       <meta name="keywords" content={post.keywords} key="keywords" />
       <meta name="description" content={post.title} key="description" />
+      {facebookProperties(post, currentUrl).map(property => (
+        <meta property={property.property} content={property.content} key={property.property} />
+      ))}
     </Head>
     <BlogBanner />
     <PostContainer post={post} currentUrl={currentUrl} />

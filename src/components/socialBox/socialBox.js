@@ -6,27 +6,25 @@ import MessengerIcon from "../../../public/assets/icons/messenger-icon";
 import CopylinkIcon from "../../../public/assets/icons/copylink-icon";
 import RedditIcon from "../../../public/assets/icons/reddit-icon";
 import useClipboard from "react-use-clipboard";
+import { FacebookProvider, Share } from 'react-facebook';
 import "./socialBox.scss";
 
 const dummyLinks = {
   whatsapp: "whatsapp://send?text=",
   linkedin: "https://www.linkedin.com/shareArticle?mini=true&url=",
-  facebook: "",
   messenger: "fb-messenger://share/?link=",
   reddit: "http://www.reddit.com/submit?url=",
   twitter: "https://twitter.com/intent/tweet?text=",
-  copylink: ""
 };
 
 const SocialBox = ({ currentUrl }) => {
   let links = {};
   links.whatsapp = dummyLinks.whatsapp + currentUrl;
   links.linkedin = dummyLinks.linkedin + currentUrl;
-  links.facebook = dummyLinks.facebook + currentUrl;
   links.messenger = dummyLinks.messenger + currentUrl;
   links.reddit = dummyLinks.reddit + currentUrl;
   links.twitter = dummyLinks.twitter + currentUrl;
-  links.copylink = dummyLinks.copylink + currentUrl;
+
   const [isCopied, setCopied] = useClipboard(currentUrl, {
     successDuration: 2000
   });
@@ -44,11 +42,17 @@ const SocialBox = ({ currentUrl }) => {
           <LinkedinIcon height={35} width={35} />
         </a>
       </div>
-      {/* <div className="social-box-fixed-facebook">
-        <a href={links.facebook} target="_blank">
-          <FacebookIcon height={35} width={35} />
-        </a>
-      </div> */}
+      <FacebookProvider appId="674147143115564">
+        <Share href={currentUrl}>
+          {({ handleClick, loading }) => (
+            <div className="social-box-fixed-facebook" onClick={handleClick}>
+              <a href={links.facebook} target="_blank">
+                <FacebookIcon height={35} width={35} />
+              </a>
+            </div>
+          )}
+        </Share>
+      </FacebookProvider>
       <div className="social-box-fixed-message">
         <a href={links.messenger}>
           <MessengerIcon height={35} width={35} />
