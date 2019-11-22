@@ -5,7 +5,7 @@ import "./hotList.scss";
 const PostHotList = ({ posts }) => {
   let key = 0;
 
-  posts = posts.sort(function(a, b) {
+  posts = posts.sort(function (a, b) {
     if (a.views > b.views) return -1;
     else if (a.views < b.views) return 1;
     return 0;
@@ -25,6 +25,7 @@ const PostHotList = ({ posts }) => {
               href="/post/[slug]"
               as={`/post/${post.slug}`}
               passHref
+              prefetch={false}
             >
               <div className="blog-posts-hot-post">
                 <h3>{post.title}</h3>
