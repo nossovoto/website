@@ -6,7 +6,7 @@ import "./blog-box.scss";
 const BlogBox = ({ posts, currentUrl }) => (
   <div className="blog-box">
     <div className="blog-margin">
-      <SocialBox currentUrl={currentUrl} />
+      {/* <SocialBox currentUrl={currentUrl} /> */}
     </div>
     <PostList posts={posts} />
     <PostHotList posts={posts} />

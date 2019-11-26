@@ -32,7 +32,7 @@ const Post = ({ post, currentUrl }) => (
 Post.getInitialProps = async ({ req, query }) => {
   const { slug } = query;
   const host = req ? req.headers.host : "nossovoto.com.br";
-  const path = req ? req.url : "/blog/";
+  const path = req ? req.url : "/post/";
   const currentUrl = "https://" + host + path + (req ? "" : slug);
   let post = await getPost(slug);
   post.text = draftToHtml(JSON.parse(post.text));
