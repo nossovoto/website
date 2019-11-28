@@ -1,6 +1,4 @@
-// pages/index.js
-
-import Header from "../components/header";
+import Head from "next/head";
 import PrivacyPolicies from "../components/privacyPolicy/privacyPolicy";
 import Banner from "../components/banner/banner";
 
@@ -16,11 +14,13 @@ const description = {
   content: "Saiba mais sobre as práticas e a Política de Privacidade do nossovoto, além dos tipos de informação que o nossovoto recebe e como elas são usadas."
 };
 
-const extra_meta = [keywords, description];
-
 const PrivacyPolicy = ({ initialProps }) => (
   <>
-    <Header title={title} extra_meta={extra_meta} />
+    <Head>
+      <title>{title}</title>
+      <meta name={keywords.name} content={keywords.content} key={keywords.name} />
+      <meta name={description.name} content={description.content} key={description.name} />
+    </Head>
     <Banner />
     <PrivacyPolicies />
   </>

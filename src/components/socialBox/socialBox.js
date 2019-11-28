@@ -6,6 +6,8 @@ import MessengerIcon from "../../../public/assets/icons/messenger-icon";
 import CopylinkIcon from "../../../public/assets/icons/copylink-icon";
 import RedditIcon from "../../../public/assets/icons/reddit-icon";
 import useClipboard from "react-use-clipboard";
+import { useRouter } from "next/router";
+import { URL } from '../../../public/js/util'
 import "./socialBox.scss";
 
 const generateLinks = (currentUrl) => {
@@ -18,11 +20,12 @@ const generateLinks = (currentUrl) => {
   }
 };
 
-const SocialBox = ({ currentUrl }) => {
-  let links = generateLinks(currentUrl);
-  const [isCopied, setCopied] = useClipboard(currentUrl, {
-    successDuration: 2000
-  });
+const SocialBox = () => {
+
+  const { asPath } = useRouter();
+  const currentUrl = URL + asPath;
+  const links = generateLinks(currentUrl);
+  const [isCopied, setCopied] = useClipboard(currentUrl, { successDuration: 2000 });
 
   return (
     <div className="social-box-fixed">

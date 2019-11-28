@@ -1,8 +1,10 @@
+import Head from 'next/head'
 import BlogBanner from "../../components/blog/banner/banner";
 import PostContainer from "../../components/blog/post/post";
+import { useRouter } from 'next/router'
+import { URL } from '../../../public/js/util'
 import { getPost } from "../../../public/js/getPosts";
 import draftToHtml from "draftjs-to-html";
-import Head from 'next/head'
 
 const facebookProperties = (post, currentUrl) => {
   return [
@@ -15,28 +17,30 @@ const facebookProperties = (post, currentUrl) => {
   ]
 }
 
-const Post = ({ post, currentUrl }) => (
-  <>
-    <Head>
-      <meta name="keywords" content={post.keywords} key="keywords" />
-      <meta name="description" content={post.title} key="description" />
-      {facebookProperties(post, currentUrl).map(property => (
-        <meta property={property.property} content={property.content} key={property.property} />
-      ))}
-    </Head>
-    <BlogBanner />
-    <PostContainer post={post} currentUrl={currentUrl} />
-  </>
-);
+const Post = ({ post }) => {
 
-Post.getInitialProps = async ({ req, query }) => {
+  const { asPath } = useRouter();
+  const currentUrl = URL + asPath;
+  return (
+    <>
+      <Head>
+        <meta name="keywords" content={post.keywords} key="keywords" />
+        <meta name="description" content={post.title} key="description" />
+        {facebookProperties(post, currentUrl).map(property => (
+          <meta property={property.property} content={property.content} key={property.property} />
+        ))}
+      </Head>
+      <BlogBanner />
+      <PostContainer post={post} />
+    </>
+  )
+};
+
+Post.getInitialProps = async ({ query }) => {
   const { slug } = query;
-  const host = req ? req.headers.host : "nossovoto.com.br";
-  const path = req ? req.url : "/post/";
-  const currentUrl = "https://" + host + path + (req ? "" : slug);
   let post = await getPost(slug);
   post.text = draftToHtml(JSON.parse(post.text));
-  return { post: post, currentUrl: currentUrl };
+  return { post: post };
 };
 
 export default Post;

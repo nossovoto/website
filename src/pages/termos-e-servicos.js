@@ -1,6 +1,4 @@
-// pages/index.js
-
-import Header from "../components/header";
+import Head from "next/head";
 import Terms from "../components/terms/terms";
 import Banner from "../components/banner/banner";
 
@@ -16,11 +14,13 @@ const description = {
   content: "Saiba mais sobre os Termos de Serviço do nossovoto, que regem seu uso do nossovoto e dos recursos, serviços, tecnologia e software."
 };
 
-const extra_meta = [keywords, description];
-
 const TermsAndServices = ({ initialProps }) => (
   <>
-    <Header title={title} extra_meta={extra_meta} />
+    <Head>
+      <title>{title}</title>
+      <meta name={keywords.name} content={keywords.content} key={keywords.name} />
+      <meta name={description.name} content={description.content} key={description.name} />
+    </Head>
     <Banner />
     <Terms />
   </>

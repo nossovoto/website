@@ -1,6 +1,4 @@
-// pages/index.js
-
-import Header from "../components/header";
+import Head from "next/head";
 import Banner from "../components/banner/banner";
 import Why from "../components/home/why/why";
 import Casas from "../components/home/casas/casas";
@@ -21,12 +19,14 @@ const description = {
   content: "O nossovoto aproxima o cidadão da política brasileira, disponibilizando tudo o que ocorre no Senado Federal e na Câmara dos Deputados Federais."
 };
 
-const extra_meta = [keywords, description];
-
 const Home = ({ posts }) => {
   return (
     <>
-      <Header title={title} extra_meta={extra_meta} />
+      <Head>
+        <title>{title}</title>
+        <meta name={keywords.name} content={keywords.content} key={keywords.name} />
+        <meta name={description.name} content={description.content} key={description.name} />
+      </Head>
       <Banner />
       <Why />
       <Casas />

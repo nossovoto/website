@@ -41,6 +41,8 @@ function throttle(func, delay) {
   };
 }
 
+export const URL = "https://nossovoto.com.br"
+
 module.exports.formatDate = formatDate;
 module.exports.getIntFromDate = getIntFromDate;
 module.exports.titleToSlug = titleToSlug;

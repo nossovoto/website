@@ -1,12 +1,12 @@
-import "./post.scss";
 import SocialBox from "../../socialBox/socialBox";
 import { formatDate } from "../../../../public/js/util";
+import "./post.scss";
 
-const PostContainer = ({ post, currentUrl }) => (
+const PostContainer = ({ post }) => (
   <>
     <div className="blog-post-page">
       <div className="blog-post-social">
-        <SocialBox currentUrl={currentUrl} />
+        <SocialBox />
       </div>
       <div className="blog-post-container">
         <h1>{post.title}</h1>
