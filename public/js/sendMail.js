@@ -3,7 +3,7 @@ import ReactDOMServer from "react-dom/server";
 
 export default function sendMail(subject, htmlContent) {
   let mail = {
-    to: "gustavomasutti@nossovoto.com.br",
+    to: "masutti@gmail.com",
     subject: subject,
     html: ReactDOMServer.renderToStaticMarkup(htmlContent)
   };

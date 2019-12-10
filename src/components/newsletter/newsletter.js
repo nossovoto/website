@@ -3,9 +3,7 @@ import useAlertBox from "../../hooks/useAlertBox";
 import newsletterSubscribe from "../../../public/js/subscribe";
 import DefaultEmail from "../emails/defaultEmail";
 import sendMail from "../../../public/js/sendMail";
-
 import "./newsletter.scss";
-
 
 const NewsLetter = props => {
   const { register, errors, handleSubmit, triggerValidation } = useForm();
@@ -16,7 +14,7 @@ const NewsLetter = props => {
     try {
       let mailResponse = await sendMail(
         "Nova inscrição no newsletter",
-        DefaultEmail({}, data.EMAIL)
+        DefaultEmail({}, "Nova Inscrição : " + data.EMAIL)
       );
 
       if (mailResponse.status === 200) {

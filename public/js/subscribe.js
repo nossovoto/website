@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const MAILCHIMP_API_KEY = "8a7a4ffcc4ee900274001ceae8987fa6-us19";
-const LIST_ID = "84d1337deb";
-const REGION_NAME = 'us19';
+const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY;
+const LIST_ID = process.env.LIST_ID;
+const REGION_NAME = process.env.REGION_NAME;
 const URL = `https://${REGION_NAME}.api.mailchimp.com/3.0/lists/${LIST_ID}/members/`;
 
 const options = {
