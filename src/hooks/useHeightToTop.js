@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import { throttle } from "../../public/js/util";
 
 const useHeightToTop = (updateInterval = 200) => {
@@ -10,7 +10,7 @@ const useHeightToTop = (updateInterval = 200) => {
 
   const [heightToTop, setHeightToTop] = useState(getHeightToTop);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!isClient) {
       return false;
     }

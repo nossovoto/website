@@ -21,8 +21,8 @@ export default function BeAWrighter() {
   const onSubmit = async data => {
     try {
       let mailResponse = await sendMail(
-        data.name + " quer escrever no blog",
-        DefaultEmail(data, "Quero ser escrever no Blog")
+        data.name + " quer se inscrever no blog",
+        DefaultEmail(data, "Nova inscrição no Blog")
       );
       close();
       if (mailResponse.status === 200) {

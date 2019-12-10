@@ -1,9 +1,10 @@
-const InputEmail = ({ register, errors }) => (
+const InputEmail = ({ register, errors, placeholder }) => (
   <>
     <label htmlFor="email">Email</label>
     <input
       type="email"
       name="email"
+      placeholder={placeholder}
       ref={register({
         required: { value: true, message: "Campo obrigatorio" },
         pattern: {

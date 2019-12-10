@@ -83,6 +83,11 @@ $image-square: 320px;
   border-color: #237ed9;
 }
 
+.why-button > a {
+  text-decoration: none;
+  color: white;
+}
+
 @media screen and (max-width: 1280px) {
   .why {
     padding: 0 $padding-hori * 2/3;

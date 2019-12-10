@@ -1,15 +1,16 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document';
 import { GtagScript, GtagNoscript } from '../libs/gtag'
+import { relative } from 'path';
 
 export default class extends Document {
     render() {
         return (
             <html lang="pt-br">
                 <Head>
-                    <GtagScript />
+                    {process.env.NODE_ENV === "production" && (<GtagScript />)}
                     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1, shrink-to-fit=no" />
-                    <meta charset="utf-8" />
+                    <meta charSet="utf-8" />
                     <meta name="author" content="CleberW3b - Cléber Oliveira" key="author" />
                     <meta name="robots" content="all" />
                     <meta name="revisit-after" content="1 day" />
@@ -20,7 +21,7 @@ export default class extends Document {
                     <link rel="manifest" href="/manifest.json" />
                 </Head>
                 <body>
-                    <GtagNoscript />
+                    <div id="alertBox"></div>
                     <Main />
                     <NextScript />
                 </body>
