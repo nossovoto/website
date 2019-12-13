@@ -1,14 +1,19 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document';
 import { GtagScript, GtagNoscript } from '../libs/gtag'
+import { HotJar } from '../libs/hotjar'
 import { relative } from 'path';
-
 export default class extends Document {
     render() {
         return (
             <html lang="pt-br">
                 <Head>
-                    {process.env.NODE_ENV === "production" && (<GtagScript />)}
+                    {process.env.NODE_ENV === "production" && (
+                        <>
+                            <GtagScript />
+                            <HotJar />
+                        </>
+                    )}
                     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1, shrink-to-fit=no" />
                     <meta charSet="utf-8" />
                     <meta name="author" content="CleberW3b - Cléber Oliveira" key="author" />
