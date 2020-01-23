@@ -5,7 +5,7 @@ import DefaultEmail from "../emails/defaultEmail";
 import sendMail from "../../../public/js/sendMail";
 import "./newsletter.scss";
 
-const NewsLetter = props => {
+const NewsLetter = ({ isHome }) => {
   const { register, errors, handleSubmit, triggerValidation } = useForm();
   const { showAlert } = useAlertBox();
 
@@ -37,7 +37,7 @@ const NewsLetter = props => {
   }
 
   return (
-    <section className="newsletter">
+    <section className={`newsletter${isHome ? ' home' : ''}`}>
       <p>Fique por dentro das novidades</p>
       <form onSubmit={handleSubmit(submit)} noValidate>
         <input

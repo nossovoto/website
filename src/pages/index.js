@@ -28,10 +28,10 @@ const Home = ({ posts }) => {
         <meta name={description.name} content={description.content} key={description.name} />
       </Head>
       <Banner />
+      <Newsletter isHome />
       <Why />
       <Casas />
       <BlogSection posts={posts} />
-      <Newsletter />
       <SobreSection />
     </>
   );

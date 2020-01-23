@@ -6,7 +6,9 @@ import Layout from "../layout/layout";
 import * as gtag from '../libs/gtag'
 import "../../public/styles/theme.scss";
 
-Router.events.on('routeChangeComplete', url => gtag.pageview(url));
+
+if (process.env.NODE_ENV === "production")
+  Router.events.on('routeChangeComplete', url => gtag.pageview(url));
 
 class MyApp extends App {
   render() {
