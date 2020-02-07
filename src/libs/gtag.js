@@ -17,7 +17,7 @@ export const event = ({ action, category, label, value }) => {
 };
 
 // Global Site Tag (gtag.js) - Google Analytics 
-export const GtagScript = props => (
+export const GtagScript = () => (
     <>
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
         <script dangerouslySetInnerHTML={{
@@ -32,7 +32,7 @@ export const GtagScript = props => (
 )
 
 // No Script Global Site Tag (gtag.js) - Google Analytics 
-export const GtagNoscript = props => (
+export const GtagNoscript = () => (
     <>
         <noscript>
             <iframe
