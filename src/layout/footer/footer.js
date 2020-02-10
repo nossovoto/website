@@ -19,11 +19,7 @@ const Footer = () => (
           />
         </Link>
         <p className="footer-text">
-          O nossovoto é uma plataforma que tem como objetivo aproximar o cidadão
-          da política brasileira. Através da nosso plataforma você tem acesso a
-          tudo que está ocorrendo no Congresso e na Política Nacional. Com o
-          nosso blog você também poderá entender tudo o que os especialistas
-          estão falando, aqui a educação é o nosso foco.
+          O nossovoto é uma plataforma que aproxima o cidadão da política brasileira. Através da nossa plataforma, você tem acesso à tudo que está ocorrendo no Congresso e na política nacional. Com o nosso blog, você também poderá entender tudo que os especialistas e a mídia estão falando. A educação é o nosso foco.
         </p>
       </div>
       <div className="footer-empresa">
