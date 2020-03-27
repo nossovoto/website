@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { URL } from '../../../public/js/util'
 import { getPost } from "../../../public/js/getPosts";
 import draftToHtml from "draftjs-to-html";
+import NewsLetter from '../../components/newsletter/newsletter';
 
 const facebookProperties = (post, currentUrl) => {
   return [
@@ -32,6 +33,10 @@ const Post = ({ post }) => {
       </Head>
       <BlogBanner />
       <PostContainer post={post} />
+      <div className="post-subscription-box">
+        <NewsLetter />
+
+      </div>
     </>
   )
 };
