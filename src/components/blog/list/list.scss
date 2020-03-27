@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 200px;
+  min-height: 200px;
   background: white;
   box-shadow: 0 0 16px 0 rgb(150, 150, 150);
   margin: 10px 0;
@@ -42,13 +42,18 @@
 }
 
 .blog-post-list-content > h1 {
-  margin: 10px 0 5px 0;
-  font-size: 28px;
+  margin: 5px 0;
+  font-size: 26px;
 }
 
-.blog-post-list-content > span {
-  overflow: hidden;
+.blog-post-list-content-sumary {
+  height: 62px;
   max-height: 62px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .blog-post-list-content-extra {
@@ -64,6 +69,16 @@
 
 .blog-posts-list-after {
   display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .blog-post-list-content > h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 }
 
 @media screen and (max-width: 720px) {

@@ -11,7 +11,7 @@ const facebookProperties = (post, currentUrl) => {
     { property: "og:url", content: currentUrl },
     { property: "og:type", content: "article" },
     { property: "og:title", content: post.title },
-    { property: "og:description", content: post.text.substring(0, 180) },
+    { property: "og:description", content: post.text.substring(0, 230) },
     { property: "og:image", content: post.thumbnail },
     { property: "og:locale", content: "pt_BR" }
   ]

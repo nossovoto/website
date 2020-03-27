@@ -3,8 +3,6 @@ import { formatDate } from "../../../../public/js/util";
 import "./hotList.scss";
 
 const PostHotList = ({ posts }) => {
-  let key = 0;
-
   posts = posts.sort(function (a, b) {
     if (a.views > b.views) return -1;
     else if (a.views < b.views) return 1;
@@ -15,10 +13,8 @@ const PostHotList = ({ posts }) => {
     <div className="blog-posts-hot">
       <div className="blog-posts-hot-box">
         <h1>Mais Acessados</h1>
-        {posts.map(post => {
+        {posts.map((post, key) => {
           let data = formatDate(post.createdAt);
-          key++;
-
           return (
             <Link
               key={key}

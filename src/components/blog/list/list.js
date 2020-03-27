@@ -3,8 +3,6 @@ import Link from "next/link";
 import { getIntFromDate, formatDate } from "../../../../public/js/util";
 
 const PostList = ({ posts }) => {
-  let key = 0;
-
   posts = posts.sort(function (a, b) {
     const dateA = getIntFromDate(a.createdAt);
     const dateB = getIntFromDate(b.createdAt);
@@ -16,9 +14,8 @@ const PostList = ({ posts }) => {
   return (
     <>
       <div className="blog-posts-list">
-        {posts.map(post => {
+        {posts.map((post, key) => {
           let data = formatDate(post.createdAt);
-          key++;
           return (
             <Link
               key={key}
@@ -33,7 +30,9 @@ const PostList = ({ posts }) => {
                 </div>
                 <div className="blog-post-list-content">
                   <h1>{post.title}</h1>
-                  <span>{post.summary}</span>
+                  <span className="blog-post-list-content-sumary">
+                    {post.summary}
+                  </span>
                   <span className="blog-post-list-content-extra">
                     Por <a>{post.author ? post.author : "nossovoto"}</a> - {data}
                   </span>
