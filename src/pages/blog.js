@@ -15,7 +15,7 @@ const facebookProperties = () => {
 }
 
 const meta = {
-  title = "nossovoto - Blog",
+  title: "nossovoto - Blog",
   keywords: "blog, nossovoto, educação politica, politica, educação",
   description: "Aprenda o funcionamento da Política Brasileira sem juridiquês. Aqui nós falamos a sua língua. Sem enrolação e direto ao ponto."
 };
@@ -37,9 +37,11 @@ const Blog = ({ posts }) => {
   )
 };
 
-Blog.getInitialProps = async () => {
+export async function getStaticProps() {
   const posts = await getPosts();
-  return { posts: posts };
+  return {
+    props: { posts },
+  }
 };
 
 export default Blog;

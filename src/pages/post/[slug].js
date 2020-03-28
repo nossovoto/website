@@ -41,11 +41,14 @@ const Post = ({ post }) => {
   )
 };
 
-Post.getInitialProps = async ({ query }) => {
-  const { slug } = query;
+export async function getServerSideProps({ params }) {
+  const { slug } = params;
   let post = await getPost(slug);
   post.text = draftToHtml(JSON.parse(post.text));
-  return { post: post };
-};
+
+  return {
+    props: { post }
+  }
+}
 
 export default Post;

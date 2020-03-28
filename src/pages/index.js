@@ -31,9 +31,11 @@ const Home = ({ posts }) => {
   );
 };
 
-Home.getInitialProps = async () => {
+export async function getStaticProps() {
   const posts = await getPosts();
-  return { posts: posts };
+  return {
+    props: { posts },
+  }
 };
 
 export default Home;
