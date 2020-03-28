@@ -2,32 +2,22 @@ import Head from "next/head";
 import PrivacyPolicies from "../components/privacyPolicy/privacyPolicy";
 import Banner from "../components/banner/banner";
 
-const title = "nossovoto - Politica de Privacidade";
-
-const keywords = {
-  name: "keywords",
-  content: "nossovoto, politica, politica de privacidade"
+const meta = {
+  title: "nossovoto - Politica de Privacidade",
+  keywords: "nossovoto, politica, politica de privacidade",
+  description: "Saiba mais sobre as práticas e a Política de Privacidade do nossovoto, além dos tipos de informação que o nossovoto recebe e como elas são usadas."
 };
 
-const description = {
-  name: "description",
-  content: "Saiba mais sobre as práticas e a Política de Privacidade do nossovoto, além dos tipos de informação que o nossovoto recebe e como elas são usadas."
-};
-
-const PrivacyPolicy = ({ initialProps }) => (
+const PrivacyPolicy = () => (
   <>
     <Head>
-      <title>{title}</title>
-      <meta name={keywords.name} content={keywords.content} key={keywords.name} />
-      <meta name={description.name} content={description.content} key={description.name} />
+      <title>{meta.title}</title>
+      <meta name={Object.keys(meta)[1]} content={meta.keywords} key={Object.keys(meta)[1]} />
+      <meta name={Object.keys(meta)[2]} content={meta.description} key={Object.keys(meta)[2]} />
     </Head>
     <Banner />
     <PrivacyPolicies />
   </>
 );
-
-PrivacyPolicy.getInitialProps = async () => {
-  return { initialProps: {} };
-};
 
 export default PrivacyPolicy;

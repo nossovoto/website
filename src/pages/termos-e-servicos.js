@@ -2,32 +2,22 @@ import Head from "next/head";
 import Terms from "../components/terms/terms";
 import Banner from "../components/banner/banner";
 
-const title = "nossovoto - Termos e Serviços";
+const meta = {
+  title: "nossovoto - Termos e Serviços",
+  keywords: "nossovoto, politica, termos de serviços",
+  description: "Saiba mais sobre os Termos de Serviço do nossovoto, que regem seu uso do nossovoto e dos recursos, serviços, tecnologia e software."
+}
 
-const keywords = {
-  name: "keywords",
-  content: "nossovoto, politica, termos de serviços"
-};
-
-const description = {
-  name: "description",
-  content: "Saiba mais sobre os Termos de Serviço do nossovoto, que regem seu uso do nossovoto e dos recursos, serviços, tecnologia e software."
-};
-
-const TermsAndServices = ({ initialProps }) => (
+const TermsAndServices = () => (
   <>
     <Head>
-      <title>{title}</title>
-      <meta name={keywords.name} content={keywords.content} key={keywords.name} />
-      <meta name={description.name} content={description.content} key={description.name} />
+      <title>{meta.title}</title>
+      <meta name={Object.keys(meta)[1]} content={meta.keywords} key={Object.keys(meta)[1]} />
+      <meta name={Object.keys(meta)[2]} content={meta.description} key={Object.keys(meta)[2]} />
     </Head>
     <Banner />
     <Terms />
   </>
 );
-
-TermsAndServices.getInitialProps = async () => {
-  return { initialProps: {} };
-};
 
 export default TermsAndServices;

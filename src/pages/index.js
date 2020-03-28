@@ -7,25 +7,19 @@ import Newsletter from "../components/newsletter/newsletter";
 import SobreSection from "../components/home/sobreSection/sobreSection";
 import { getPosts } from "../../public/js/getPosts";
 
-const title = "nossovoto";
-
-const keywords = {
-  name: "keywords",
-  content: "home, nossovoto, politica, congresso nacional, brasil, câmara federal, senado federal, lei, leis"
-};
-
-const description = {
-  name: "description",
-  content: "O nossovoto aproxima o cidadão da política brasileira, disponibilizando tudo o que ocorre no Senado Federal e na Câmara dos Deputados Federais."
+const meta = {
+  title: "nossovoto",
+  keywords: "home, nossovoto, politica, congresso nacional, brasil, câmara federal, senado federal, lei, leis",
+  description: "O nossovoto aproxima o cidadão da política brasileira, disponibilizando tudo o que ocorre no Senado Federal e na Câmara dos Deputados Federais."
 };
 
 const Home = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name={keywords.name} content={keywords.content} key={keywords.name} />
-        <meta name={description.name} content={description.content} key={description.name} />
+        <title>{meta.title}</title>
+        <meta name={Object.keys(meta)[1]} content={meta.keywords} key={Object.keys(meta)[1]} />
+        <meta name={Object.keys(meta)[2]} content={meta.description} key={Object.keys(meta)[2]} />
       </Head>
       <Banner />
       {/* <Newsletter isHome /> */}
