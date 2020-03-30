@@ -4,7 +4,7 @@ function ErrorPage({ errorCode }) {
     return <Error statusCode={errorCode} />
 }
 
-export async function getServerSideProps({ res }) {
+ErrorPage.getInitialProps = async ({ res }) => {
     var errorCode;
     if (res) {
         errorCode = res.statusCode > 200 ? res.statusCode : false;
