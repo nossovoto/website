@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useForm from "react-hook-form";
+import { useForm } from "react-hook-form";
 import Modal from "../modal/modal";
 import sendMail from "../../../public/js/sendMail";
 import AlertBox from "../alertBox/alertBox";

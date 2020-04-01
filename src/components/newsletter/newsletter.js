@@ -1,4 +1,4 @@
-import useForm from "react-hook-form";
+import { useForm } from "react-hook-form";
 import useAlertBox from "../../hooks/useAlertBox";
 import newsletterSubscribe from "../../../public/js/subscribe";
 import DefaultEmail from "../emails/defaultEmail";

@@ -1,4 +1,5 @@
 {
+  "author": "Cleber Oliveira <cleberw3b@gmail.com> (https://github.com/Cleberw3b)",
   "name": "website",
   "version": "0.1.0",
   "description": "Website nossovoto - Criando a ponte entre a politica e o cidadão.",
@@ -13,6 +14,11 @@
     "type": "git",
     "url": "git+https://github.com/nossovoto/website.git"
   },
+  "bugs": {
+    "url": "https://github.com/nossovoto/website/issues"
+  },
+  "homepage": "https://github.com/nossovoto/website#readme",
+  "license": "MIT",
   "keywords": [
     "politica",
     "senado",
@@ -23,16 +29,10 @@
     "lei",
     "transparência"
   ],
-  "author": "Cleber Oliveira <cleberw3b@gmail.com> (https://github.com/Cleberw3b)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nossovoto/website/issues"
-  },
-  "homepage": "https://github.com/nossovoto/website#readme",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.19.2",
-    "draftjs-to-html": "^0.8.4",
+    "draftjs-to-html": "^0.9.1",
     "next": "^9.3.2",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.5",
@@ -40,10 +40,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-facebook": "^8.1.4",
-    "react-hook-form": "^3.29.4",
+    "react-hook-form": "^5.2.0",
     "react-spring": "^8.0.27",
     "react-use-clipboard": "^1.0.0",
-    "react-use-gesture": "^6.0.14"
+    "react-use-gesture": "^7.0.6"
   },
   "devDependencies": {
     "dotenv": "^8.2.0"
