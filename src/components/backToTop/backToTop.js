@@ -1,7 +1,7 @@
 import "./backToTop.scss"
 import useHeightToTop from "../../hooks/useHeightToTop";
 import { useState, useEffect } from 'react'
-import { throttle } from "../../../public/js/util";
+import { backToTop } from "../../../public/js/util";
 
 const default_y_offset = 350;
 const updateInterval = 100
@@ -20,19 +20,6 @@ const BackToTop = () => {
         setstate(false)
     };
   }, [heightToTop])
-
-  function backToTop() {
-    try {
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-      });
-    } catch (error) {
-      // just a fallback for older browsers
-      window.scrollTo(0, 0);
-    }
-  }
 
   return (
     <>

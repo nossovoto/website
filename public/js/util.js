@@ -41,9 +41,23 @@ function throttle(func, delay) {
   };
 }
 
+function backToTop(top = 0, left = 0, behave = 'smooth') {
+  try {
+    window.scroll({
+      top: top,
+      left: left,
+      behavior: behave,
+    });
+  } catch (error) {
+    // just a fallback for older browsers
+    window.scrollTo(top, left);
+  }
+}
+
 export const URL = "https://nossovoto.com.br"
 
 module.exports.formatDate = formatDate;
 module.exports.getIntFromDate = getIntFromDate;
 module.exports.titleToSlug = titleToSlug;
 module.exports.throttle = throttle;
+module.exports.backToTop = backToTop;

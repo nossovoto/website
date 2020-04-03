@@ -32,7 +32,9 @@ const Home = ({ posts }) => {
 };
 
 export async function getStaticProps() {
-  const posts = await getPosts();
+  var posts = await getPosts();
+  posts = posts.slice(0, 10);
+
   return {
     props: { posts },
   }
