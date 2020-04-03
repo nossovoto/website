@@ -45,7 +45,9 @@ const PostList = ({ posts }) => {
   return (
     <div className="blog-posts">
       <div className="blog-posts-list" >
-        {listPost.map((post, key) => <PostItemList post={post} showSeparator={key < (listPost.length - 1)} key={key} />)}
+        {listPost.map((post, key) =>
+          <PostItemList post={post} showSeparator={key < (listPost.length - 1)} key={key} />
+        )}
       </div>
       <Pagination
         count={numberOfPages}

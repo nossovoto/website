@@ -17,23 +17,23 @@ const PostItemList = ({ post, showSeparator }) => {
                 passHref
                 prefetch={false}
             >
-                <div className="blog-post-box">
-                    <div className="blog-post-img">
+                <div className="blog-item-box">
+                    <div className="blog-item-img">
                         <img src={post.thumbnail}
                             onLoad={() => showContent()} onError={() => showContent()} />
                     </div>
-                    <div className="blog-post-content">
+                    <div className="blog-item-content">
                         <h1>{post.title}</h1>
-                        <p className="blog-post-content-author">
+                        <p className="blog-item-content-author">
                             Por <a>{post.author ? post.author : "nossovoto"}</a> em {data}
                         </p>
-                        <span className="blog-post-content-sumary">
+                        <span className="blog-item-content-sumary">
                             {post.summary}
                         </span>
                     </div>
                 </div>
             </Link>
-            {showSeparator ? <div className="blog-posts-list-separator" /> : null}
+            {showSeparator ? <div className="blog-item-separator" /> : null}
         </div>
     )
 }
