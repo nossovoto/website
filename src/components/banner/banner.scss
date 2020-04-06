@@ -1,14 +1,6 @@
-.banner {
-  background: url("/static/images/banner_home.jpg");
-  background-color: #cccccc;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 420px;
+.banner img {
+  max-width: 100vw;
 }
 
 @media screen and (max-width: 720px) {
-  .banner {
-    height: 210px;
-  }
 }

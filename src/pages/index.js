@@ -3,7 +3,6 @@ import Banner from "../components/banner/banner";
 import Why from "../components/home/why/why";
 import Casas from "../components/home/casas/casas";
 import BlogSection from "../components/home/blogSection/blogSection";
-import Newsletter from "../components/newsletter/newsletter";
 import SobreSection from "../components/home/sobreSection/sobreSection";
 import { getPosts } from "../../public/js/getPosts";
 
@@ -22,7 +21,6 @@ const Home = ({ posts }) => {
         <meta name={Object.keys(meta)[2]} content={meta.description} key={Object.keys(meta)[2]} />
       </Head>
       <Banner />
-      {/* <Newsletter isHome /> */}
       <Why />
       <Casas />
       <BlogSection posts={posts} />

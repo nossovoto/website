@@ -1,6 +1,6 @@
 import React from 'react'
-import DefaultEmail from "../emails/defaultEmail";
-import sendMail from "../../../public/js/sendMail";
+import DefaultEmail from "../../emails/defaultEmail";
+import sendMail from "../../../../public/js/sendMail";
 
 import './newsletterBlog.scss'
 
@@ -29,7 +29,7 @@ const NewsletterBlog = ({ withIcon = false }) => {
     };
 
     return (
-        <div className={"newsletter-blog" + `${withIcon ? "" : " no-icon"}`}>
+        <div id="newsletter-blog" className={"newsletter-blog" + `${withIcon ? "" : " no-icon"}`}>
             {withIcon && <div className="newsletter-blog-icon" dangerouslySetInnerHTML={{ __html: icon }} />}
             <div className="newsletter-blog-box">
                 <div className="newsletter-blog-titulo">

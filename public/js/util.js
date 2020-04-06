@@ -41,7 +41,7 @@ function throttle(func, delay) {
   };
 }
 
-function backToTop(top = 0, left = 0, behave = 'smooth') {
+function scrollTo(top = 0, left = 0, behave = 'smooth') {
   try {
     window.scroll({
       top: top,
@@ -60,4 +60,4 @@ module.exports.formatDate = formatDate;
 module.exports.getIntFromDate = getIntFromDate;
 module.exports.titleToSlug = titleToSlug;
 module.exports.throttle = throttle;
-module.exports.backToTop = backToTop;
+module.exports.scrollTo = scrollTo;

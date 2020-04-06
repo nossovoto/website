@@ -1,13 +1,13 @@
 import "./banner.scss";
 
-const Banner = () => <section className="banner"></section>;
+const Banner = () => (
+  <section className="banner">
+    <picture>
+      <source srcSet="/static/images/banner_home.webp" type="image/webp" />
+      <source srcSet="/static/images/banner-home.png" type="image/png" />
+      <img src="/static/images/banner-home.png" alt="banner" />
+    </picture>
+  </section>
+);
 
 export default Banner;
-
-{
-  /* <picture>
-<source srcSet={require('./images/my-image.jpg?webp')} type="image/webp" />
-<source srcSet={require('./images/my-image.jpg')} type="image/jpeg" />
-<img src={require('./images/my-image.jpg')} />
-</picture> */
-}

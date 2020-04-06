@@ -1,5 +1,5 @@
 import Pagination from '@material-ui/lab/Pagination';
-import { getIntFromDate, backToTop } from "../../../../public/js/util";
+import { getIntFromDate, scrollTo } from "../../../../public/js/util";
 import PostItemList from '../postItemList/postItemList';
 
 import "./postList.scss";
@@ -37,7 +37,7 @@ const PostList = ({ posts }) => {
       await setListPost(posts.slice(begin, end));
 
       setTimeout(() => {
-        backToTop(105, 0);
+        scrollTo();
       }, 100);
     }
   };
@@ -47,7 +47,9 @@ const PostList = ({ posts }) => {
       <div className="blog-posts-list" >
         {listPost.map((post, key) => {
           var showSeparator = key + 1 < listPost.length;
-          var showNewsletter = key + 1 == listPost.length / 2;
+          var showNewsletter = listPost.length < 4 && key + 1 === listPost.length;
+          if (listPost.length > 3)
+            showNewsletter = key + 1 == Math.ceil(listPost.length / 2) - 1;
           if (showNewsletter) showSeparator = false;
           return <PostItemList
             key={key}

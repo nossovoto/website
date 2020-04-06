@@ -1,5 +1,5 @@
 import Head from "next/head";
-import BlogBanner from "../components/blog/banner/banner";
+import BlogBanner from "../components/blog/blog-banner/blog-banner";
 import BlogBox from "../components/blog/blog-box/blog-box";
 import { getPosts } from "../../public/js/getPosts";
 

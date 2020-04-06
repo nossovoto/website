@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { formatDate } from "../../../../public/js/util";
-import NewsletterBlog from "../../newsletterBlog/newsletterBlog";
+import NewsletterBlog from "../../blog/newsletterBlog/newsletterBlog";
 
 import "./postItemList.scss";
 

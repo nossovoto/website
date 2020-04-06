@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import BlogBanner from "../../components/blog/banner/banner";
+import BlogBanner from "../../components/blog/blog-banner/blog-banner";
 import PostContainer from "../../components/blog/post/post";
 import { useRouter } from 'next/router'
 import { URL } from '../../../public/js/util'
 import { getPost } from "../../../public/js/getPosts";
 import draftToHtml from "draftjs-to-html";
-import NewsletterBlog from '../../components/newsletterBlog/newsletterBlog';
+import NewsletterBlog from '../../components/blog/newsletterBlog/newsletterBlog';
 
 const facebookProperties = (post, currentUrl) => {
   return [
