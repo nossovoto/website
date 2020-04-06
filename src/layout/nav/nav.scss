@@ -33,7 +33,7 @@ $square_logo: 80px;
 }
 
 .nav a.active {
-  background-color: dodgerblue;
+  background-color: rgb(25, 83, 134);
   color: white;
 }
 
@@ -58,13 +58,13 @@ $square_logo: 80px;
   font-size: $font_size;
   line-height: 25px;
   border-radius: 4px;
-  border: 1px solid dodgerblue;
+  border: 1px solid rgb(25, 83, 134);
   cursor: pointer;
 }
 
 .acessar-app-button:hover {
-  background-color: dodgerblue;
-  color: white;
+  background-color: #ddd;
+  color: black;
 }
 
 @media screen and (max-width: 720px) {
