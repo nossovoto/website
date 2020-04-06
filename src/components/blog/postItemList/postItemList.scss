@@ -81,3 +81,9 @@
         font-size: 18px;
     }
 }
+
+@media screen and (max-width: 512px) {
+    .blog-item-img {
+        display: none;
+    }
+}

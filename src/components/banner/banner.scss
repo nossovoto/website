@@ -1,6 +1,6 @@
-.banner img {
-  max-width: 100vw;
-}
-
-@media screen and (max-width: 720px) {
+.banner > picture > img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }

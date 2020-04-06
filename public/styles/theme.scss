@@ -21,7 +21,8 @@ $color: (
   linkHover: "#0d8ecf",
   border: "#ddd",
   warning: "#fff3cd",
-  success: "#d4edda"
+  success: "#d4edda",
+  button: "rgb(25, 83, 134)",
 );
 
 $padding-vert: 32px;
@@ -34,15 +35,15 @@ $padding-hori: 128px;
 .default-form {
   display: flex;
   flex-direction: column;
-  
+
   input {
     border: none;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid rgb(25, 83, 134);
     font-size: 16px;
   }
 
   textarea {
-    border: 1px solid blue;
+    border: 1px solid rgb(25, 83, 134);
     font-size: 16px;
   }
 
@@ -52,11 +53,11 @@ $padding-hori: 128px;
   }
 
   input:focus {
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid rgb(25, 83, 134);
   }
 
   textarea:focus {
-    border: 2px solid blue;
+    border: 2px solid rgb(25, 83, 134);
   }
 }
 
@@ -88,9 +89,9 @@ $padding-hori: 128px;
 }
 
 .send-button {
-  background: blue;
-  color: white;
-  border: blue;
+  background: rgb(25, 83, 134);
+  color: whitesmoke;
+  border: rgb(25, 83, 134);
   border-radius: 8px;
 }
 
