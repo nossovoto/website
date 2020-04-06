@@ -1,23 +1,23 @@
 import Link from "next/link";
 import { formatDate } from "../../../../public/js/util";
+import NewsletterBlog from "../../newsletterBlog/newsletterBlog";
 
 import "./postItemList.scss";
 
-const PostItemList = ({ post, showSeparator }) => {
+const PostItemList = ({ post, showSeparator, showNewsletter }) => {
 
     const [hide, setHide] = React.useState(true);
     const showContent = () => setHide(false);
     const data = formatDate(post.createdAt);
 
     return (
-        <div hidden={hide}>
+        <>
             <Link
                 href="/post/[slug]"
                 as={`/post/${post.slug}`}
                 passHref
-                prefetch={false}
             >
-                <div className="blog-item-box">
+                <div className="blog-item-box" hidden={hide}>
                     <div className="blog-item-img">
                         <img src={post.thumbnail}
                             onLoad={() => showContent()} onError={() => showContent()} />
@@ -34,7 +34,8 @@ const PostItemList = ({ post, showSeparator }) => {
                 </div>
             </Link>
             {showSeparator ? <div className="blog-item-separator" /> : null}
-        </div>
+            {showNewsletter ? <NewsletterBlog /> : null}
+        </>
     )
 }
 

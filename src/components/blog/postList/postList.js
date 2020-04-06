@@ -29,7 +29,7 @@ const PostList = ({ posts }) => {
         begin = postsPerPage * value - postsPerPage;
 
       if (value === numberOfPages)
-        end = posts.length
+        end = posts.length;
       else
         end = value * postsPerPage;
 
@@ -37,17 +37,25 @@ const PostList = ({ posts }) => {
       await setListPost(posts.slice(begin, end));
 
       setTimeout(() => {
-        backToTop(105, 0, 'auto');
-      }, 200);;
+        backToTop(105, 0);
+      }, 100);
     }
   };
 
   return (
     <div className="blog-posts">
       <div className="blog-posts-list" >
-        {listPost.map((post, key) =>
-          <PostItemList post={post} showSeparator={key < (listPost.length - 1)} key={key} />
-        )}
+        {listPost.map((post, key) => {
+          var showSeparator = key + 1 < listPost.length;
+          var showNewsletter = key + 1 == listPost.length / 2;
+          if (showNewsletter) showSeparator = false;
+          return <PostItemList
+            key={key}
+            post={post}
+            showSeparator={showSeparator}
+            showNewsletter={showNewsletter}
+          />
+        })}
       </div>
       <Pagination
         count={numberOfPages}

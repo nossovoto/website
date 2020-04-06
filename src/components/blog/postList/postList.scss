@@ -25,6 +25,7 @@
 @media screen and (max-width: 720px) {
   .blog-posts-list {
     width: 90vw;
+    margin-left: calc(4vw - 12px);
   }
 
   .blog-post-content-sumary {
@@ -40,5 +41,11 @@
 
   .blog-post-content > h1 {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .blog-posts-list {
+    margin-left: 12px;
   }
 }
