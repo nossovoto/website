@@ -14,7 +14,7 @@ const BlogBanner = () => {
       <div className="blog-banner-button-box">
         <span>Assine nossa <br /> newsletter semanal</span>
         <button onClick={handleClick}>
-          Assinar
+          Cadastre-se
         </button>
       </div>
     </div>
