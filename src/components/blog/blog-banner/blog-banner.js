@@ -12,7 +12,7 @@ const BlogBanner = () => {
     <div className="blog-banner">
       <h1>Blog de política do nossovoto</h1>
       <div className="blog-banner-button-box">
-        <span>Assine nossa <br /> newsletter semanal</span>
+        <span>Receba nossa <br /> newsletter semanal</span>
         <button onClick={handleClick}>
           Cadastre-se
         </button>
