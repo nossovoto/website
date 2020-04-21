@@ -3,7 +3,6 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { GtagScript, GtagNoscript } from '../libs/gtag'
 import { HotJar } from '../libs/hotjar'
 import { Mailchimp } from '../libs/mailchimp';
-import { Disqus } from '../libs/disqus';
 
 export default class extends Document {
     render() {
@@ -15,7 +14,6 @@ export default class extends Document {
                             <GtagScript />
                             <HotJar />
                             <Mailchimp />
-                            <Disqus />
                         </>
                     )}
                     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1, shrink-to-fit=no" />

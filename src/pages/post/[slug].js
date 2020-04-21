@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Head from 'next/head';
 import BlogBanner from "../../components/blog/blog-banner/blog-banner";
 import PostContainer from "../../components/blog/post/post";
@@ -7,6 +6,7 @@ import { URL } from '../../../public/js/util';
 import { getPost } from "../../../public/js/getPosts";
 import draftToHtml from "draftjs-to-html";
 import NewsletterBlog from '../../components/blog/newsletterBlog/newsletterBlog';
+import Disqus from '../../components/Disqus/disqus';
 
 const facebookProperties = (post, currentUrl) => {
   return [
@@ -23,19 +23,7 @@ const Post = ({ post }) => {
 
   const { asPath } = useRouter();
   const currentUrl = URL + asPath;
-  const disqusShortName = post.title;
-  const disqusConfig = {
-    url: currentUrl,
-    identifier: post.slug,
-    title: post.title
-  }
 
-  useEffect(() => {
-    var disqus_config = function () {
-      this.page.url = currentUrl;  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = post.slug; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-  }, [])
   return (
     <>
       <Head>
@@ -48,7 +36,7 @@ const Post = ({ post }) => {
       <BlogBanner />
       <PostContainer post={post} />
       <NewsletterBlog withIcon />
-      <div id="disqus_thread"></div>
+      <Disqus url={currentUrl} identifier={post.slug} title={post.title} />
     </>
   )
 };
