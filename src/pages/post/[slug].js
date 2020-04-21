@@ -1,12 +1,12 @@
-import Head from 'next/head'
+import { useEffect } from 'react';
+import Head from 'next/head';
 import BlogBanner from "../../components/blog/blog-banner/blog-banner";
 import PostContainer from "../../components/blog/post/post";
-import { useRouter } from 'next/router'
-import { URL } from '../../../public/js/util'
+import { useRouter } from 'next/router';
+import { URL } from '../../../public/js/util';
 import { getPost } from "../../../public/js/getPosts";
 import draftToHtml from "draftjs-to-html";
 import NewsletterBlog from '../../components/blog/newsletterBlog/newsletterBlog';
-import { DiscussionEmbed } from 'disqus-react';
 
 const facebookProperties = (post, currentUrl) => {
   return [
@@ -29,6 +29,13 @@ const Post = ({ post }) => {
     identifier: post.slug,
     title: post.title
   }
+
+  useEffect(() => {
+    var disqus_config = function () {
+      this.page.url = currentUrl;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = post.slug; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+  }, [])
   return (
     <>
       <Head>
@@ -41,7 +48,7 @@ const Post = ({ post }) => {
       <BlogBanner />
       <PostContainer post={post} />
       <NewsletterBlog withIcon />
-      <DiscussionEmbed shortname={disqusShortName} config={disqusConfig} />
+      <div id="disqus_thread"></div>
     </>
   )
 };
