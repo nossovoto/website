@@ -6,6 +6,7 @@ import { URL } from '../../../public/js/util'
 import { getPost } from "../../../public/js/getPosts";
 import draftToHtml from "draftjs-to-html";
 import NewsletterBlog from '../../components/blog/newsletterBlog/newsletterBlog';
+import { DiscussionEmbed } from 'disqus-react';
 
 const facebookProperties = (post, currentUrl) => {
   return [
@@ -22,6 +23,12 @@ const Post = ({ post }) => {
 
   const { asPath } = useRouter();
   const currentUrl = URL + asPath;
+  const disqusShortName = post.title;
+  const disqusConfig = {
+    url: currentUrl,
+    identifier: post.slug,
+    title: post.title
+  }
   return (
     <>
       <Head>
@@ -34,6 +41,7 @@ const Post = ({ post }) => {
       <BlogBanner />
       <PostContainer post={post} />
       <NewsletterBlog withIcon />
+      <DiscussionEmbed shortname={disqusShortName} config={disqusConfig} />
     </>
   )
 };

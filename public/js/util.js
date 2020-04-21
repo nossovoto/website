@@ -54,6 +54,13 @@ function scrollTo(top = 0, left = 0, behave = 'smooth') {
   }
 }
 
+function mapObjectKeys(obj) {
+  Object.keys(obj).map(key => {
+    const data = obj[key];
+    return data;
+  })
+}
+
 export const URL = "https://nossovoto.com.br"
 
 module.exports.formatDate = formatDate;
@@ -61,3 +68,4 @@ module.exports.getIntFromDate = getIntFromDate;
 module.exports.titleToSlug = titleToSlug;
 module.exports.throttle = throttle;
 module.exports.scrollTo = scrollTo;
+module.exports.mapObjectKeys = mapObjectKeys;
