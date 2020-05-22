@@ -8,7 +8,7 @@ import ButtonBox from "../buttonBox/buttonBox"
 import DefaultEmail from "../emails/defaultEmail"
 import sendMail from "../../util/sendMail"
 
-import "./beAWrighter.scss"
+import style from "./beAWrighter.module.scss"
 
 const BeAWrighter = () => {
   const [showModal, setShowModal] = useState(false)
@@ -45,7 +45,7 @@ const BeAWrighter = () => {
       <a onClick={() => setShowModal(true)}>Quer escrever em nosso blog?</a>
       {showModal && (
         <Modal close={close}>
-          <div className="be-wrighter">
+          <div className={style.main}>
             <h1>Quer escrever em nosso blog?</h1>
             <form
               className="default-form"

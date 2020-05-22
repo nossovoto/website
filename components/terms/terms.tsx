@@ -1,4 +1,3 @@
-import "./term.scss"
 import TermsSection1 from "./sections/section1"
 import TermsSection2 from "./sections/section2"
 import TermsSection3 from "./sections/section3"
@@ -12,8 +11,11 @@ import TermsSection10 from "./sections/section10"
 import TermsSection11 from "./sections/section11"
 import TermsSection12 from "./sections/section12"
 
+import style from "./term.module.scss"
+
+
 const Terms = () => (
-  <div className="terms-services">
+  <div className={style.main}>
     <h1>TERMOS E CONDIÇÕES GERAIS DE USO DO SITE nossovoto</h1>
     <p>
       Estes termos e condições gerais de uso aplicam-se aos serviços prestados

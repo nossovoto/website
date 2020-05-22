@@ -1,16 +1,14 @@
 
-import FacebookIcon from "../../icons/facebook-icon"
-
+import FacebookIcon from "../../icons/facebookIcon"
+import { FACEBOOK_APP_ID } from "../../util/consts"
 import { FacebookProvider, Share } from 'react-facebook'
 
-const appID = "674147143115564"
-
-const FaceBookShare = ({ url_to_share }) => {
+const FaceBookShare = ({ url_to_share, shareClass }) => {
     return (
-        <FacebookProvider appId={appID}>
+        <FacebookProvider appId={FACEBOOK_APP_ID}>
             <Share href={url_to_share}>
                 {({ handleClick, loading }) => (
-                    <div className="social-box-fixed-facebook" onClick={handleClick}>
+                    <div className={shareClass} onClick={handleClick}>
                         <FacebookIcon height={35} width={35} />
                     </div>
                 )}

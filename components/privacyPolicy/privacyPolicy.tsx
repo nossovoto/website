@@ -1,7 +1,7 @@
-import "./privacyPolicy.scss"
+import style from "./privacyPolicy.module.scss"
 
 const PrivacyPolicies = () => (
-  <div className="privacy-policy">
+  <div className={style.main}>
     <h1>Política de Privacidade do nossovoto</h1>
     <ol type="1">
       <li>

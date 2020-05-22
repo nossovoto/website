@@ -1,25 +1,24 @@
-const withPlugins = require("next-compose-plugins");
-const optimizedImages = require("next-optimized-images");
-const sass = require("@zeit/next-sass");
-const env = process.env.NODE_ENV;
-const isDevelopment = env === "development";
-const isProduction = env === "production";
-const isTest = env === "test";
+const withPlugins = require("next-compose-plugins")
+const optimizedImages = require("next-optimized-images")
+const env = process.env.NODE_ENV
+const isDevelopment = env === "development"
+const isProduction = env === "production"
+const isTest = env === "test"
 
 if (isDevelopment) {
-  require("dotenv").config();
+  require("dotenv").config()
 }
 
 var envVariables = {
   TEST: process.env.TEST,
   ENVIRONMENT: process.env.NODE_ENV
-};
+}
 
 const nextConfig = {
   distDir: "build",
   target: "serverless",
   env: envVariables
-};
+}
 
 module.exports = withPlugins(
   [
@@ -30,13 +29,7 @@ module.exports = withPlugins(
         optimizeImages: false
       }
     ],
-    [
-      sass,
-      {
-        /* config for sass */
-      }
-    ]
     // your other plugins here
   ],
   { nextConfig }
-);
+)

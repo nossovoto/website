@@ -1,7 +1,7 @@
-import "./faq.scss";
+import style from "./faq.module.scss"
 
 const FAQPage = () => (
-  <div className="faq">
+  <div className={style.main}>
     <h1>FAQ</h1>
     <h3>O que é o nossovoto?</h3>
     <p>
@@ -28,6 +28,6 @@ const FAQPage = () => (
       Caso não encontre o que você quer saber, fique à vontade para entrar em contato através do nosso e-mail.
     </p>
   </div>
-);
+)
 
-export default FAQPage;
+export default FAQPage

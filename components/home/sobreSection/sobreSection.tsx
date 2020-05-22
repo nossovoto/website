@@ -1,8 +1,8 @@
-import "./sobreSection.scss"
+import style from "./sobreSection.module.scss"
 
 const SobreSection = () => (
-  <section className="sobreSection">
-    <div className="sobreSection-box">
+  <section className={style.main}>
+    <div className={style.box}>
       <h1>
         O nossovoto nasce para aproximar o cidadão da política brasileira.
       </h1>
@@ -28,17 +28,17 @@ const SobreSection = () => (
         blog você também poderá entender tudo o que os especialistas estão
         falando. Aqui a educação política é o nosso foco.
       </p>
-      <div className="sobreSection-servicos">
-        <div className="sobreSection-servicos-block">
-          <div className="sobreSection-servicos-circle">COLHE</div>
+      <div className={style.servicos}>
+        <div className={style.servicos_block}>
+          <div className={style.servicos_circle}>COLHE</div>
           <p>Recolhemos os dados que estão espalhados na rede</p>
         </div>
-        <div className="sobreSection-servicos-block">
-          <div className="sobreSection-servicos-circle">ORGANIZA</div>
+        <div className={style.servicos_block}>
+          <div className={style.servicos_circle}>ORGANIZA</div>
           <p>Organizamos de forma clara, objetiva e neutra</p>
         </div>
-        <div className="sobreSection-servicos-block">
-          <div className="sobreSection-servicos-circle">SIMPLIFICA</div>
+        <div className={style.servicos_block}>
+          <div className={style.servicos_circle}>SIMPLIFICA</div>
           <p>
             Sem juridiquês! Disponibilizamos o resumo para você formar a sua
             própria opinião e debater com outros usuários

@@ -1,14 +1,12 @@
-import { useState } from "react"
 import { useForm } from "react-hook-form"
-import sendMail from "../../../public/js/sendMail"
-import AlertBox from "../alertBox/alertBox"
+import sendMail from "../../util/sendMail"
 import InputName from "../formComponent/inputName"
 import InputEmail from "../formComponent/inputEmail"
 import TextArea from "../formComponent/textArea"
 import ButtonBox from "../buttonBox/buttonBox"
 import DefaultEmail from "../emails/defaultEmail"
 
-import "./contact.scss"
+import style from "./contact.module.scss"
 
 const Contact = () => {
   const { register, errors, handleSubmit } = useForm()
@@ -32,9 +30,9 @@ const Contact = () => {
 
   return (
     <>
-      <div className="contact-page">
+      <div className={style.main}>
         <h1>Contato</h1>
-        <div className="contact-form">
+        <div className={style.form}>
           <form
             className="default-form"
             onSubmit={handleSubmit(onSubmit)}

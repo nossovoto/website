@@ -1,19 +1,19 @@
 import Link from "next/link"
-import InstagramIcon from "../../icons/instagram-icon"
-import LinkedinIcon from "../../icons/linkedin-icon"
-import TwitterIcon from "../../icons/twitter-icon"
-import FacebookIcon from "../../icons/facebook-icon"
+import InstagramIcon from "../../icons/instagramIcon"
+import LinkedinIcon from "../../icons/linkedinIcon"
+import TwitterIcon from "../../icons/twitterIcon"
+import FacebookIcon from "../../icons/facebookIcon"
 import BugReport from "../../components/bugReport/bugReport"
 import BeAWrighter from "../../components/beAWrighter/beAWrighter"
-import "./footer.scss"
+import style from "./footer.module.scss"
 
 const Footer = () => (
-  <footer className="footer">
-    <div className="widget">
-      <div className="footer-nossovoto">
+  <footer className={style.main}>
+    <div className={style.widget}>
+      <div className={style.nossovoto}>
         <Link href="/" passHref>
           <img
-            className="footer-logo"
+            className={style.logo}
             src="/static/images/logo_azul.png"
             alt="logo"
           />
@@ -22,7 +22,7 @@ const Footer = () => (
           O nossovoto é uma plataforma que aproxima o cidadão da política brasileira. Através da nossa plataforma, você tem acesso à tudo que está ocorrendo no Congresso e na política nacional. Com o nosso blog, você também poderá entender tudo que os especialistas e a mídia estão falando. A educação é o nosso foco.
         </p>
       </div>
-      <div className="footer-empresa">
+      <div className={style.empresa}>
         <h4>Empresa</h4>
         <ul>
           <li>
@@ -42,7 +42,7 @@ const Footer = () => (
           </li>
         </ul>
       </div>
-      <div className="footer-comunidade">
+      <div className={style.comunidade}>
         <h4>Comunidade</h4>
         <ul>
           <li>
@@ -53,7 +53,7 @@ const Footer = () => (
           </li>
         </ul>
       </div>
-      <div className="footer-ajuda">
+      <div className={style.ajuda}>
         <h4>Ajuda</h4>
         <ul>
           <li>
@@ -69,7 +69,7 @@ const Footer = () => (
         </ul>
       </div>
     </div>
-    <div className="footer-social-box">
+    <div className={style.social_box}>
       <a href="https://www.instagram.com/nossovoto/" target="_blank">
         <InstagramIcon height={30} width={30} />
       </a>

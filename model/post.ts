@@ -1,8 +1,9 @@
 export interface IPost {
+    _id: number
     articles: []
     author: string
     author_link: string
-    comments: []
+    coments: []
     createdAt: string
     keywords: string
     slug: string
@@ -12,6 +13,7 @@ export interface IPost {
     thumbnail_alt: string
     title: string
     text: string
+    user: string
     views: number
 }
 

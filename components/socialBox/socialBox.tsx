@@ -1,14 +1,14 @@
 
-import WhatsappIcon from "../../icons/whatsapp-icon"
-import LinkedinIcon from "../../icons/linkedin-icon"
-import MessengerIcon from "../../icons/messenger-icon"
-import RedditIcon from "../../icons/reddit-icon"
-import TwitterIcon from "../../icons/twitter-icon"
-import CopylinkIcon from "../../icons/copylink-icon"
+import WhatsappIcon from "../../icons/whatsappIcon"
+import LinkedinIcon from "../../icons/linkedinIcon"
+import MessengerIcon from "../../icons/messengerIcon"
+import RedditIcon from "../../icons/redditIcon"
+import TwitterIcon from "../../icons/twitterIcon"
+import CopylinkIcon from "../../icons/copylinkIcon"
 import FaceBookShare from "./useFacebookShare"
 import useClipboard from "react-use-clipboard"
 import { useRouter } from "next/router"
-import "./socialBox.scss"
+import style from "./socialBox.module.scss"
 
 const generateLinks = (currentUrl) => {
   return {
@@ -28,35 +28,35 @@ const SocialBox = () => {
   const [isCopied, setCopied] = useClipboard(currentUrl, { successDuration: 2000 })
 
   return (
-    <div className="social-box-fixed">
+    <div className={style.main}>
       <h3>Compartilhe</h3>
-      <div className="social-box-fixed-whatsapp">
+      <div className={style.link}>
         <a href={links.whatsapp}>
           <WhatsappIcon height={35} width={35} />
         </a>
       </div>
-      <div className="social-box-fixed-linkedin">
+      <div className={style.link}>
         <a href={links.linkedin} target="_blank">
           <LinkedinIcon height={35} width={35} />
         </a>
       </div>
-      <FaceBookShare url_to_share={currentUrl} />
-      <div className="social-box-fixed-message">
+      <FaceBookShare url_to_share={currentUrl} shareClass={style.link} />
+      <div className={style.link}>
         <a href={links.messenger}>
           <MessengerIcon height={35} width={35} />
         </a>
       </div>
-      <div className="social-box-fixed-reddit" >
+      <div className={style.link}>
         <a href={links.reddit} target="_blank">
           <RedditIcon height={35} width={35} />
         </a>
       </div>
-      <div className="social-box-fixed-twitter">
+      <div className={style.link}>
         <a href={links.twitter} target="_blank">
           <TwitterIcon height={35} width={35} />
         </a>
       </div>
-      <div className={"social-box-fixed-copylink"} onClick={setCopied}>
+      <div className={style.link} onClick={setCopied}>
         <CopylinkIcon height={35} width={35} />
       </div>
       {isCopied && "Link copiado!"}

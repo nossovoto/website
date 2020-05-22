@@ -2,8 +2,10 @@ import { FC } from "react"
 import { useForm } from "react-hook-form"
 import sendMail from "../../util/sendMail"
 import DefaultEmail from "../emails/defaultEmail"
-import "./newsletter.scss"
+import { EMAIL_REGEX } from "../../util/consts"
+import style from "./newsletter.module.scss"
 
+// TODO DEPRECATED
 interface INewsLetterProps {
   isHome: boolean
 }
@@ -12,7 +14,6 @@ const NewsLetter: FC<INewsLetterProps> = ({ isHome }) => {
   const { register, errors, handleSubmit, triggerValidation } = useForm()
 
   const submit = async data => {
-    // console.log(data);
     try
     {
       const mailResponse = await sendMail(
@@ -25,31 +26,29 @@ const NewsLetter: FC<INewsLetterProps> = ({ isHome }) => {
 
     } catch (error)
     {
-      // console.log(error)
       alert(error.message)
     }
   }
 
   return (
-    <section className={`newsletter${isHome ? ' home' : ''}`}>
+    <section className={style.newsletter + `${isHome ? ` ${style.home}` : ''}`}>
       <p>Fique por dentro das novidades</p>
       <form onSubmit={handleSubmit(submit)} noValidate>
         <input
-          className="newsletter-input"
           type="email"
           name="email"
           placeholder="jose@exemplo.com.br"
           ref={register({
             required: { value: true, message: "Campo obrigatorio" },
             pattern: {
-              value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              value: EMAIL_REGEX,
               message: "E-mail invalido"
             }
           })}
         />
         <button
           type="submit"
-          className="newsletter-button"
+          className={style.button}
           onClick={async () => await triggerValidation()}
         >
           Receber Novidades

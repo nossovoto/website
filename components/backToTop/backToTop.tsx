@@ -1,8 +1,8 @@
 import useHeightToTop from "../../hooks/useHeightToTop"
 import { useState, useEffect } from 'react'
 import { scrollTo } from "../../util/util"
-import UpArrowIcon from "../../icons/up-arrow-icon"
-import "./backToTop.scss"
+import UpArrowIcon from "../../icons/upArrowIcon"
+import style from "./backToTop.module.scss"
 
 const defaultYOffset = 350
 const updateInterval = 100
@@ -24,7 +24,7 @@ const BackToTop = () => {
   return (
     <>
       {show &&
-        <div className="back-to-top" onClick={() => scrollTo()}>
+        <div className={style.main} onClick={() => scrollTo()}>
           <UpArrowIcon />
         </div >
       }

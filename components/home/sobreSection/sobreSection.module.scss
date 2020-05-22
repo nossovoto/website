@@ -1,0 +1,108 @@
+$circle-size: 192px;
+
+.main {
+  margin: 32px auto 0 auto;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #16518c;
+  color: rgb(240, 240, 240);
+}
+
+.box {
+  margin: 0 15%;
+}
+
+.box h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.box p {
+  margin: 24px auto;
+  width: calc(100% - 64px);
+  text-align: justify;
+  font-size: 18px;
+}
+
+.servicos {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.servicos_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+}
+
+.servicos_circle {
+  width: $circle-size;
+  height: $circle-size;
+  padding: 8px;
+  background-color: #237ed9;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.servicos_block p {
+  margin-top: 16px;
+  text-align: center;
+  width: 90%;
+  height: 100px;
+}
+
+@media screen and (max-width: 1280px) {
+  .servicos_circle {
+    width: $circle-size * 0.9;
+    height: $circle-size * 0.9;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .servicos_circle {
+    width: $circle-size * 0.66;
+    height: $circle-size * 0.66;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .servicos {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .servicos_block {
+    width: auto;
+  }
+
+  .box p {
+    width: calc(100% - 32px);
+    text-align: center;
+  }
+
+  .servicos_circle {
+    width: $circle-size * 0.9;
+    height: $circle-size * 0.9;
+  }
+
+  .servicos_block p {
+    height: auto;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 512px) {
+}

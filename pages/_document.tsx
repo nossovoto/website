@@ -29,7 +29,6 @@ export default class extends Document {
           <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
-          <div id="alertBox"></div>
           <Main />
           <NextScript />
         </body>

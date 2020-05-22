@@ -1,28 +1,26 @@
 import axios from "axios"
 import ReactDOMServer from "react-dom/server"
 import { ReactElement } from "react"
+import { SEND_EMAIL_API_URL, SEND_TO_EMAIL } from "./consts"
+import { getUnauthorizedHttpAgent } from "./util"
 
-export default function sendMail(subject: string, htmlContent: ReactElement) {
-  let mail = {
-    to: "masutti@gmail.com",
-    subject: subject,
+const sendMail = (subject: string, htmlContent: ReactElement) => {
+  const mail = {
+    to: SEND_TO_EMAIL,
+    subject: `${subject}`,
     html: ReactDOMServer.renderToStaticMarkup(htmlContent)
-  };
-
-  const agent = new (require("https")).Agent({
-    rejectUnauthorized: false
-  })
-
-  const URL = "https://nossovoto.com.br:3002/sendEmailNotification"
+  }
 
   return axios({
-    method: "post",
-    url: URL,
+    method: 'post',
+    url: SEND_EMAIL_API_URL,
     data: {
       to: mail.to,
       subject: mail.subject,
       html: mail.html
     },
-    httpsAgent: agent
+    httpsAgent: getUnauthorizedHttpAgent()
   })
 }
+
+export default sendMail

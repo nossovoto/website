@@ -1,7 +1,7 @@
-import "./sobrePage.scss"
+import style from "./sobrePage.module.scss"
 
 const SobrePage = () => (
-  <div className="page-sobre">
+  <div className={style.main}>
     <h1>Sobre</h1>
     <h3>Quem é o nossovoto?</h3>
     <p>

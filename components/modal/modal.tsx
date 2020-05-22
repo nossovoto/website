@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react"
-import "./modal.scss"
+import style from "./modal.module.scss"
 
 interface IModalProps {
   close: () => void
@@ -9,8 +9,8 @@ interface IModalProps {
 const Modal: FC<IModalProps> = ({ close, children }) => {
   return (
     <>
-      <div className="modal-overlay" onClick={() => close()}></div>
-      <div className="modal">
+      <div className={style.overlay} onClick={() => close()}></div>
+      <div className={style.main}>
         {children}
       </div>
       <style jsx global>{`

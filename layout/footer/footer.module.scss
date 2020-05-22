@@ -1,0 +1,99 @@
+.main {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+}
+
+.main ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main li {
+  padding-top: 8px;
+}
+
+.main a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.main a:hover,
+.main a:focus {
+  text-decoration: underline;
+}
+
+.widget {
+  display: flex;
+  flex-direction: row;
+}
+
+.nossovoto {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nossovoto img {
+  width: 50%;
+}
+
+.footer-logo {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+}
+
+.text {
+  padding: 16px;
+  width: 90%;
+}
+
+.empresa,
+.comunidade,
+.ajuda {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 0 16px;
+}
+
+.social_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.social_box a {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.main small {
+  text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+  .main {
+    padding: 24px 12px;
+  }
+  .widget {
+    flex-direction: column;
+  }
+
+  .nossovoto,
+  .empresa,
+  .comunidade,
+  .ajuda {
+    width: calc(100% - 24px);
+  }
+
+  .social-box {
+    margin-top: 32px;
+  }
+}

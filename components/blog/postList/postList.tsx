@@ -4,7 +4,7 @@ import Pagination from '@material-ui/lab/Pagination'
 import PostItemList from '../postItemList/postItemList'
 import { getIntFromDate, scrollTo } from '../../../util/util'
 
-import "./postList.scss"
+import style from "./postList.module.scss"
 
 const PostList: FC<IPostListProps> = ({ posts }) => {
 
@@ -48,8 +48,8 @@ const PostList: FC<IPostListProps> = ({ posts }) => {
   }
 
   return (
-    <div className="blog-posts">
-      <div className="blog-posts-list" >
+    <div className={style.main}>
+      <div className={style.list} >
         {listPost.map((post, key) => {
           let showSeparator = key + 1 < listPost.length
           let showNewsletter = listPost.length < 4 && key + 1 === listPost.length

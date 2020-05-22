@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
-import "./alertBox.scss"
+import "./alertBox.module.scss"
 import useHeightToTop from "../../hooks/useHeightToTop"
+
+// TODO DEPRECATED
 
 const types = ["success", "info", "warn", "error"]
 

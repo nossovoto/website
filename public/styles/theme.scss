@@ -95,6 +95,10 @@ $padding-hori: 128px;
   border-radius: 8px;
 }
 
+.MuiPagination-root {
+  margin: 15px auto;
+}
+
 @media screen and (max-width: 800px) {
   .home-container {
     padding: $padding-vert $padding-hori/2;

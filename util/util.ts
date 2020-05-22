@@ -64,4 +64,8 @@ export function mapObjectKeys(obj: {}) {
   })
 }
 
-export const NOSSOVOTO_URL = "https://nossovoto.com.br"
+export function getUnauthorizedHttpAgent() {
+  return new (require("https")).Agent({
+    rejectUnauthorized: false
+  })
+}

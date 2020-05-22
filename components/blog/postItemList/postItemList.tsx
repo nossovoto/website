@@ -4,7 +4,7 @@ import { IPost } from "../../../model/post"
 import NewsletterBlog from "../newsletterBlog/newsletterBlog"
 import { formatDate } from "../../../util/util"
 
-import "./postItemList.scss"
+import style from "./postItemList.module.scss"
 
 interface IPostItemList {
     post: IPost
@@ -25,23 +25,23 @@ const PostItemList: FC<IPostItemList> = ({ post, showSeparator, showNewsletter }
                 as={`/post/${post.slug}`}
                 passHref
             >
-                <div className="blog-item-box" hidden={hide}>
-                    <div className="blog-item-img">
+                <div className={style.main} hidden={hide}>
+                    <div className={style.img}>
                         <img src={post.thumbnail}
                             onLoad={() => showContent()} onError={() => showContent()} />
                     </div>
-                    <div className="blog-item-content">
+                    <div className={style.content}>
                         <h1>{post.title}</h1>
-                        <p className="blog-item-content-author">
+                        <p className={style.author}>
                             Por <a>{post.author ? post.author : "nossovoto"}</a> em {data}
                         </p>
-                        <span className="blog-item-content-sumary">
+                        <span className={style.sumary}>
                             {post.summary}
                         </span>
                     </div>
                 </div>
             </Link>
-            {showSeparator ? <div className="blog-item-separator" /> : null}
+            {showSeparator ? <div className={style.separator} /> : null}
             {showNewsletter ? <NewsletterBlog /> : null}
         </>
     )

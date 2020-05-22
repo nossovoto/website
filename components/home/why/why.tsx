@@ -1,13 +1,13 @@
-import "./why.scss"
+import style from "./why.module.scss"
 
 const Why = () => (
-  <section className="why">
-    <div className="why-container">
-      <div className="why-description">
+  <section className={style.main}>
+    <div className={style.container}>
+      <div className={style.description}>
         <h3>
           {"Você já reparou que os políticos somem após as eleições?".toUpperCase()}
         </h3>
-        <div className="why-separator"> </div>
+        <div className={style.separator}> </div>
         <p>
           {"Neste período será que estão te representando no Congresso?".toUpperCase()}
         </p>
@@ -18,7 +18,7 @@ const Why = () => (
           além de poder opinar sobre o que está sendo debatido por lá.
         </p>
       </div>
-      <div className="why-image">
+      <div className={style.image}>
         <picture>
           <source srcSet="/static/images/abismo.webp" type="image/webp" />
           <source srcSet="/static/images/abismo.jpg" type="image/jpg" />
@@ -26,7 +26,7 @@ const Why = () => (
         </picture>
       </div>
     </div>
-    <div className="why-button">
+    <div className={style.button}>
       <a href="https://app.nossovoto.com.br" target="_blank">
         Acesse agora, se informe e dê sua opinião
       </a>

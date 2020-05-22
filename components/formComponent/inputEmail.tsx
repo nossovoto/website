@@ -1,12 +1,7 @@
 import { FC } from "react"
+import { IInput } from "./formComponentsInterface"
 
-interface IInputEmail {
-  register: any
-  errors: any
-  placeholder?: string
-}
-
-const InputEmail: FC<IInputEmail> = ({ register, errors, placeholder }) => (
+const InputEmail: FC<IInput> = ({ register, errors, placeholder }) => (
   <>
     <label htmlFor="email">Email</label>
     <input

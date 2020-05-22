@@ -2,7 +2,7 @@ import { FC } from "react"
 import Link from "next/link"
 import { IPostListProps } from "../../../model/post"
 import { formatDate } from "../../../util/util"
-import "./hotList.scss"
+import style from "./hotList.module.scss"
 
 const PostHotList: FC<IPostListProps> = ({ posts }) => {
   posts = posts.sort((a, b) => {
@@ -12,8 +12,8 @@ const PostHotList: FC<IPostListProps> = ({ posts }) => {
   })
 
   return (
-    <div className="blog-posts-hot">
-      <div className="blog-posts-hot-box">
+    <div className={style.main}>
+      <div className={style.box}>
         <h1>Mais Acessados</h1>
         {posts.map((post, key) => {
           const data = formatDate(post.createdAt)
@@ -25,7 +25,7 @@ const PostHotList: FC<IPostListProps> = ({ posts }) => {
               passHref
               prefetch={false}
             >
-              <div className="blog-posts-hot-post">
+              <div className={style.post}>
                 <h3>{post.title}</h3>
                 <span>
                   por <a>{post.author ? post.author : "nossovoto"}</a> em {data}

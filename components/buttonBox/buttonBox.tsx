@@ -1,15 +1,15 @@
 import { FC } from "react"
 import CancelButton from "../formComponent/cancelButton"
 import SubmitButton from "../formComponent/submitButton"
-import "./buttonBox.scss"
+import style from "./buttonBox.module.scss"
 
 interface IButtonBox {
-  cancel: () => void
+  cancel?: () => void
   submit?: () => void
 }
 
 const ButtonBox: FC<IButtonBox> = ({ cancel, submit }) => (
-  <div className="button-box">
+  <div className={style.main}>
     <CancelButton cancel={cancel} />
     <SubmitButton submit={submit} />
   </div>

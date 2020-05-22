@@ -1,4 +1,4 @@
-import "./blog-banner.scss"
+import style from "./blog-banner.module.scss"
 
 const BlogBanner = () => {
 
@@ -8,9 +8,9 @@ const BlogBanner = () => {
   }
 
   return (
-    <div className="blog-banner">
+    <div className={style.main}>
       <h1>Blog de política do nossovoto</h1>
-      <div className="blog-banner-button-box">
+      <div className={style.button_box}>
         <span>Receba nossa <br /> newsletter semanal</span>
         <button onClick={handleClick}>
           Cadastre-se

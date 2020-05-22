@@ -8,7 +8,7 @@ import ButtonBox from "../buttonBox/buttonBox"
 import DefaultEmail from "../emails/defaultEmail"
 import sendMail from "../../util/sendMail"
 
-import "./bugReport.scss"
+import style from "./bugReport.module.scss"
 
 export default function BugReport() {
   const [showModal, setShowModal] = useState(false)
@@ -48,9 +48,9 @@ export default function BugReport() {
       <a onClick={() => setShowModal(true)}>Achou algum erro?</a>
       {showModal && (
         <Modal close={close}>
-          <div className="bug-report">
+          <div className={style.main}>
             <h1>Achou algum erro?</h1>
-            <div className="">
+            <div>
               <form
                 className="default-form"
                 onSubmit={handleSubmit(onSubmit)}
