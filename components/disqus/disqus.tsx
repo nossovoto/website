@@ -1,5 +1,5 @@
 import { DiscussionEmbed } from "disqus-react"
-import { DISQUS_SHORT_NAME } from "../../util/consts"
+import { DISQUS_SHORT_NAME } from "util/consts"
 import style from "./disqus.module.scss"
 
 const Disqus = ({ url, identifier, title }) => {
@@ -12,4 +12,5 @@ const Disqus = ({ url, identifier, title }) => {
     </div>
   )
 }
+
 export default Disqus

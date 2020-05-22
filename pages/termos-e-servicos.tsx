@@ -1,6 +1,6 @@
 import Head from "next/head"
-import Terms from "../components/terms/terms"
-import Banner from "../components/banner/banner"
+import Terms from "components/terms/terms"
+import Banner from "components/banner/banner"
 
 const meta = {
   title: "nossovoto - Termos e Serviços",

@@ -1,6 +1,6 @@
 import Head from "next/head"
-import PrivacyPolicies from "../components/privacyPolicy/privacyPolicy"
-import Banner from "../components/banner/banner"
+import PrivacyPolicies from "components/privacyPolicy/privacyPolicy"
+import Banner from "components/banner/banner"
 
 const meta = {
   title: "nossovoto - Politica de Privacidade",

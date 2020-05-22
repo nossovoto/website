@@ -1,7 +1,7 @@
 import { FC } from "react"
 import Link from "next/link"
-import { IPostListProps } from "../../../model/post"
-import { formatDate } from "../../../util/util"
+import { IPostListProps } from "model/post"
+import { formatDate } from "util/util"
 import style from "./hotList.module.scss"
 
 const PostHotList: FC<IPostListProps> = ({ posts }) => {

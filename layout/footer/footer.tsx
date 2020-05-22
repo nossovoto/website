@@ -1,10 +1,10 @@
 import Link from "next/link"
-import InstagramIcon from "../../icons/instagramIcon"
-import LinkedinIcon from "../../icons/linkedinIcon"
-import TwitterIcon from "../../icons/twitterIcon"
-import FacebookIcon from "../../icons/facebookIcon"
-import BugReport from "../../components/bugReport/bugReport"
-import BeAWrighter from "../../components/beAWrighter/beAWrighter"
+import InstagramIcon from "icons/instagramIcon"
+import LinkedinIcon from "icons/linkedinIcon"
+import TwitterIcon from "icons/twitterIcon"
+import FacebookIcon from "icons/facebookIcon"
+import BugReport from "components/bugReport/bugReport"
+import BeAWrighter from "components/beAWrighter/beAWrighter"
 import style from "./footer.module.scss"
 
 const Footer = () => (

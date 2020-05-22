@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import "./alertBox.module.scss"
-import useHeightToTop from "../../hooks/useHeightToTop"
+import useHeightToTop from "hooks/useHeightToTop"
+import style from "./alertBox.module.scss"
 
 // TODO DEPRECATED
 

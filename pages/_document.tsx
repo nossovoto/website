@@ -1,15 +1,16 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
-import { GtagScript, GtagNoscript } from '../util/third_part_scripts/gtag'
-import { HotJar } from '../util/third_part_scripts/hotjar'
-import { Mailchimp } from '../util/third_part_scripts/mailchimp'
+import { GtagScript, GtagNoscript } from 'util/third_part_scripts/gtag'
+import { HotJar } from 'util/third_part_scripts/hotjar'
+import { Mailchimp } from 'util/third_part_scripts/mailchimp'
+import { isProductionEnv } from 'util/consts'
 
 export default class extends Document {
   render() {
     return (
       <html lang="pt-br">
         <Head>
-          {process.env.NODE_ENV === "production" && (
+          {isProductionEnv && (
             <>
               <GtagScript />
               <HotJar />

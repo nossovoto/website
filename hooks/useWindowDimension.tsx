@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { throttle } from "../util/util"
+import { throttle } from "util/util"
 
 interface IWindowDimension {
   width: number

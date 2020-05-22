@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form"
-import sendMail from "../../util/sendMail"
-import InputName from "../formComponent/inputName"
-import InputEmail from "../formComponent/inputEmail"
-import TextArea from "../formComponent/textArea"
-import ButtonBox from "../buttonBox/buttonBox"
-import DefaultEmail from "../emails/defaultEmail"
+import sendMail from "util/sendMail"
+import InputName from "components/formComponent/inputName"
+import InputEmail from "components/formComponent/inputEmail"
+import TextArea from "components/formComponent/textArea"
+import ButtonBox from "components/formComponent/buttonBox"
+import DefaultEmail from "components/emails/defaultEmail"
 
 import style from "./contact.module.scss"
 

@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
-import DefaultEmail from "../../emails/defaultEmail"
-import sendMail from '../../../util/sendMail'
-import { EMAIL_REGEX } from '../../../util/consts'
-import NewsletterCellphoneIcon from '../../../icons/newsletterCellpnhoneIcon'
+import DefaultEmail from 'components/emails/defaultEmail'
+import NewsletterCellphoneIcon from 'icons/newsletterCellpnhoneIcon'
+import sendMail from 'util/sendMail'
+import { EMAIL_REGEX } from 'util/consts'
 import style from './newsletterBlog.module.scss'
 
 interface INewsletterBlog {

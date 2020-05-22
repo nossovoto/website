@@ -36,22 +36,17 @@
     "disqus-react": "^1.0.8",
     "draftjs-to-html": "^0.9.1",
     "next": "^9.4.2",
-    "next-compose-plugins": "^2.2.0",
-    "next-optimized-images": "^2.6.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-facebook": "^8.1.4",
     "react-hook-form": "^5.7.2",
-    "react-spring": "^8.0.27",
     "react-use-clipboard": "^1.0.0",
-    "react-use-gesture": "^7.0.15",
     "sass": "^1.26.5"
   },
   "devDependencies": {
-    "@types/node": "^14.0.4",
+    "@types/node": "^14.0.5",
     "@types/react-dom": "^16.9.8",
-    "dotenv": "^8.2.0",
     "tslint": "^6.1.2",
     "typescript": "^3.9.3"
   }

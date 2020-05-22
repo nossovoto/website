@@ -1,8 +1,8 @@
 import { FC } from "react"
 import { useForm } from "react-hook-form"
-import sendMail from "../../util/sendMail"
-import DefaultEmail from "../emails/defaultEmail"
-import { EMAIL_REGEX } from "../../util/consts"
+import DefaultEmail from "components/emails/defaultEmail"
+import sendMail from "util/sendMail"
+import { EMAIL_REGEX } from "util/consts"
 import style from "./newsletter.module.scss"
 
 // TODO DEPRECATED

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { throttle } from "../util/util"
+import { throttle } from "util/util"
 
 const useHeightToTop = (updateInterval = 200): number => {
 

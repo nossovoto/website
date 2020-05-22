@@ -1,8 +1,8 @@
 import Head from "next/head"
-import Banner from "../components/banner/banner"
-import Why from "../components/home/why/why"
-import Casas from "../components/home/casas/casas"
-import SobreSection from "../components/home/sobreSection/sobreSection"
+import Banner from "components/banner/banner"
+import Why from "components/home/why/why"
+import Casas from "components/home/casas/casas"
+import SobreSection from "components/home/sobreSection/sobreSection"
 
 const meta = {
   title: "nossovoto",

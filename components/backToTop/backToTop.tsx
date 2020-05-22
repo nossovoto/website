@@ -1,7 +1,7 @@
-import useHeightToTop from "../../hooks/useHeightToTop"
+import useHeightToTop from "hooks/useHeightToTop"
 import { useState, useEffect } from 'react'
-import { scrollTo } from "../../util/util"
-import UpArrowIcon from "../../icons/upArrowIcon"
+import { scrollTo } from "util/util"
+import UpArrowIcon from "icons/upArrowIcon"
 import style from "./backToTop.module.scss"
 
 const defaultYOffset = 350

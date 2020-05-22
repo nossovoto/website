@@ -1,9 +1,8 @@
 import { useState, FC } from 'react'
-import { IPostListProps } from '../../../model/post'
+import { IPostListProps } from 'model/post'
 import Pagination from '@material-ui/lab/Pagination'
 import PostItemList from '../postItemList/postItemList'
-import { getIntFromDate, scrollTo } from '../../../util/util'
-
+import { getIntFromDate, scrollTo } from 'util/util'
 import style from "./postList.module.scss"
 
 const PostList: FC<IPostListProps> = ({ posts }) => {

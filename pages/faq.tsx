@@ -1,6 +1,6 @@
 import Head from "next/head"
-import Banner from "../components/banner/banner"
-import FAQPage from "../components/faq/faq"
+import Banner from "components/banner/banner"
+import FAQPage from "components/faq/faq"
 
 const meta = {
   title: "nossovoto - FAQ",

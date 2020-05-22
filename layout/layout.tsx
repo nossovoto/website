@@ -1,6 +1,6 @@
 import Nav from "./nav/nav"
 import Footer from "./footer/footer"
-import BackToTop from "../components/backToTop/backToTop"
+import BackToTop from "components/backToTop/backToTop"
 
 const Layout = props => (
   <>

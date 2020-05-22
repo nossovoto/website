@@ -5,5 +5,5 @@ export interface IInput {
 }
 
 export interface IButton {
-    triggerAction: () => void
+    triggerAction?: () => void
 }

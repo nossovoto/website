@@ -1,8 +1,7 @@
 import { FC } from "react"
-import { IPostProps } from "../../../model/post"
-import SocialBox from "../../socialBox/socialBox"
-import { formatDate } from "../../../util/util"
-
+import SocialBox from "components/socialBox/socialBox"
+import { IPostProps } from "model/post"
+import { formatDate } from "util/util"
 import style from "./post.module.scss"
 
 const PostContainer: FC<IPostProps> = ({ post }) => (

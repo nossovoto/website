@@ -1,13 +1,13 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
-import { IPostProps, IPost } from '../../model/post'
-import BlogBanner from "../../components/blog/blog-banner/blog-banner"
-import PostContainer from "../../components/blog/post/post"
 import { useRouter } from 'next/router'
 import draftToHtml from "draftjs-to-html"
-import NewsletterBlog from '../../components/blog/newsletterBlog/newsletterBlog'
-import Disqus from '../../components/disqus/disqus'
-import { getPost, getPosts } from '../../util/getPosts'
+import { IPostProps, IPost } from 'model/post'
+import BlogBanner from "components/blog/blog-banner/blog-banner"
+import PostContainer from "components/blog/post/post"
+import NewsletterBlog from 'components/blog/newsletterBlog/newsletterBlog'
+import Disqus from 'components/disqus/disqus'
+import { getPost, getPosts } from 'util/getPosts'
 
 const facebookProperties = (post: IPost, currentUrl: string) => {
   return [

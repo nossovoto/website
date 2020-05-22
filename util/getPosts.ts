@@ -1,5 +1,5 @@
 import axios from "axios"
-import { IPostList } from "../model/post"
+import { IPostList } from "model/post"
 import { POST_API_URL } from "./consts"
 import { getUnauthorizedHttpAgent } from "./util"
 

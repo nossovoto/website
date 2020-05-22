@@ -1,7 +1,6 @@
-
-import FacebookIcon from "../../icons/facebookIcon"
-import { FACEBOOK_APP_ID } from "../../util/consts"
 import { FacebookProvider, Share } from 'react-facebook'
+import FacebookIcon from "icons/facebookIcon"
+import { FACEBOOK_APP_ID } from "util/consts"
 
 const FaceBookShare = ({ url_to_share, shareClass }) => {
     return (

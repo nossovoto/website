@@ -1,13 +1,13 @@
 
-import WhatsappIcon from "../../icons/whatsappIcon"
-import LinkedinIcon from "../../icons/linkedinIcon"
-import MessengerIcon from "../../icons/messengerIcon"
-import RedditIcon from "../../icons/redditIcon"
-import TwitterIcon from "../../icons/twitterIcon"
-import CopylinkIcon from "../../icons/copylinkIcon"
-import FaceBookShare from "./useFacebookShare"
-import useClipboard from "react-use-clipboard"
 import { useRouter } from "next/router"
+import useClipboard from "react-use-clipboard"
+import WhatsappIcon from "icons/whatsappIcon"
+import LinkedinIcon from "icons/linkedinIcon"
+import MessengerIcon from "icons/messengerIcon"
+import RedditIcon from "icons/redditIcon"
+import TwitterIcon from "icons/twitterIcon"
+import CopylinkIcon from "icons/copylinkIcon"
+import FaceBookShare from "./useFacebookShare"
 import style from "./socialBox.module.scss"
 
 const generateLinks = (currentUrl) => {
