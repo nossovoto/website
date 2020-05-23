@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { IButton } from "./formComponentsInterface"
+import { IButton } from "./props/formComponentsInterface"
 
 const CancelButton: FC<IButton> = ({ triggerAction }) => (
   <button

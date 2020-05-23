@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { IInput } from "./formComponentsInterface"
+import { IInput } from "./props/formComponentsInterface"
 
 const TextArea: FC<IInput> = ({ register, errors }) => (
   <>
