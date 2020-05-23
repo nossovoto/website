@@ -6,15 +6,15 @@ import * as gtag from 'util/third_part_scripts/gtag'
 import { isProductionEnv, isDevelopmentEnv } from "util/consts"
 import "public/styles/theme.scss"
 
-if (isProductionEnv)
-  Router.events.on('routeChangeComplete', url => gtag.pageview(url))
-
 // Will be called once for every metric that has to be reported.
 export function reportWebVitals(metric) {
   // These metrics can be sent to any analytics service
   // tslint:disable-next-line:no-console
   console.log(metric)
 }
+
+if (isProductionEnv)
+  Router.events.on('routeChangeComplete', url => gtag.pageview(url))
 
 class MyApp extends App {
   render() {

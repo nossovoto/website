@@ -1,7 +1,7 @@
 import { FC } from "react"
 import CancelButton from "./cancelButton"
 import SubmitButton from "./submitButton"
-import style from "./slyte.module.scss"
+import style from "./formComponent.module.scss"
 
 interface IButtonBox {
   cancel?: () => void

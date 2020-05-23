@@ -37,7 +37,7 @@ const NewsletterBlog: FC<INewsletterBlog> = ({ withIcon = false }) => {
         }
     }
     return (
-        <div id="newsletter-blog" className={style.main + `${withIcon ? ` ${style.with_icon}` : ""}`}>
+        <div id="newsletter-blog" className={style.main + `${withIcon ? "" : ` ${style.no_icon}`}`}>
             {withIcon && <NewsletterCellphoneIcon iconClass={style.icon} />}
             <div className={style.box}>
                 <div className={style.titulo}>

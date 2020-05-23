@@ -1,7 +1,7 @@
 import { useState, FC } from "react"
 import Link from "next/link"
 import { IPost } from "model/post"
-import { formatDate } from "util/util"
+import { formatDate } from "../../../util/util"
 import NewsletterBlog from "../newsletterBlog/newsletterBlog"
 import style from "./postItemList.module.scss"
 
