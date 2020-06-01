@@ -16,7 +16,7 @@ export async function getPosts(numberOfPosts?: number) {
     return data
   } catch (error)
   {
-    alert(error)
+    console.error(error)
   }
 }
 
@@ -32,6 +32,6 @@ export async function getPost(slug: string) {
     return post
   } catch (error)
   {
-    alert(error)
+    console.error(error)
   }
 }

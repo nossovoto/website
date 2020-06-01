@@ -20,11 +20,11 @@ const Contact = () => {
       )
       if (mailResponse.status === 200)
       {
-        alert("Enviado com sucesso!")
+        console.log("Enviado com sucesso!")
       }
     } catch (error)
     {
-      alert(error.message)
+      console.error(error)
     }
   }
 

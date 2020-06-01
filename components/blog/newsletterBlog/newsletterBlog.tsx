@@ -28,12 +28,12 @@ const NewsletterBlog: FC<INewsletterBlog> = ({ withIcon = false }) => {
             )
             if (mailResponse.status === 200)
             {
-                window.alert("Obrigado por se inscrever!")
+                console.log("Obrigado por se inscrever!")
                 setEmail("")
             }
         } catch (error)
         {
-            window.alert(error)
+            console.error(error)
         }
     }
     return (
@@ -41,10 +41,10 @@ const NewsletterBlog: FC<INewsletterBlog> = ({ withIcon = false }) => {
             {withIcon && <NewsletterCellphoneIcon iconClass={style.icon} />}
             <div className={style.box}>
                 <div className={style.titulo}>
-                    {"inscreva-se em nossa newsletter".toUpperCase()}
+                    {"inscreva-se em nossa lsita de e-mails".toUpperCase()}
                 </div>
                 <div className={style.sub_titulo}>
-                    e receba por e-mail o resumo semanal sobre a politica brasileira
+                    receba nossos artigos sobre educação e política
                 </div>
                 <div className={style.input_box}>
                     <input
