@@ -1,7 +1,11 @@
-export interface IiconProps {
+export interface IIconProps {
     color?: Colors
     width?: number
     height?: number
+}
+
+export interface IIconAsHTMLProps extends IIconProps {
+    iconClass?: string
 }
 
 export enum Colors {

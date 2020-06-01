@@ -1,8 +1,8 @@
 import { FC } from "react"
-import { IiconProps } from "./props/iconInterface"
+import { IIconProps } from "./props/iconInterface"
 import style from "./props/icon.module.scss"
 
-const SearchIcon: FC<IiconProps> = ({ height, width }) => (
+const SearchIcon: FC<IIconProps> = ({ height, width }) => (
   <svg
     height={height ? `${height}px` : "24px"}
     width={width ? `${width}px` : "24px"}

@@ -1,8 +1,8 @@
 import { FC } from "react"
-import { IiconProps, Colors } from "./props/iconInterface"
+import { IIconProps, Colors } from "./props/iconInterface"
 import style from "./props/icon.module.scss"
 
-const FacebookIcon: FC<IiconProps> = ({ color, height, width }) => (
+const FacebookIcon: FC<IIconProps> = ({ color, height, width }) => (
   <svg
     height={height ? `${height}px` : "24px"}
     width={width ? `${width}px` : "24px"}

@@ -1,6 +1,7 @@
 import { FC } from "react"
+import { IIconProps } from "./props/iconInterface"
 
-interface IProps {
+interface IProps extends IIconProps {
     iconClass: string
 }
 
