@@ -1,45 +1,26 @@
-import { useState, FC } from "react"
-import Link from "next/link"
-import { IPost } from "model/post"
-import { formatDate } from "../../../util/util"
+import { FC } from "react"
+import { IPost, IPostList } from "model/post"
 import NewsletterBlog from "../newsletterBlog/newsletterBlog"
 import style from "./postItemList.module.scss"
+import PostItem from "../postItem/postItem"
 
 interface IPostItemList {
+    listPost: IPostList
     post: IPost
-    showSeparator: boolean
-    showNewsletter: boolean
+    position: number
 }
 
-const PostItemList: FC<IPostItemList> = ({ post, showSeparator, showNewsletter }) => {
+const PostItemList: FC<IPostItemList> = ({ post, position, listPost }) => {
 
-    const [hide, setHide] = useState(true)
-    const showContent = () => setHide(false)
-    const data = formatDate(post.createdAt)
+    let showSeparator = position + 1 < listPost.length
+    let showNewsletter = listPost.length < 4 && position + 1 === listPost.length
+    if (listPost.length > 3)
+        showNewsletter = position + 1 === Math.ceil(listPost.length / 2) - 1
+    if (showNewsletter) showSeparator = false
 
     return (
         <>
-            <Link
-                href="/post/[slug]"
-                as={`/post/${post.slug}`}
-                passHref
-            >
-                <div className={style.main} hidden={hide}>
-                    <div className={style.img}>
-                        <img src={post.thumbnail}
-                            onLoad={() => showContent()} onError={() => showContent()} />
-                    </div>
-                    <div className={style.content}>
-                        <h1>{post.title}</h1>
-                        <p className={style.author}>
-                            Por <a>{post.author ? post.author : "nossovoto"}</a> em {data}
-                        </p>
-                        <span className={style.sumary}>
-                            {post.summary}
-                        </span>
-                    </div>
-                </div>
-            </Link>
+            <PostItem post={post} />
             {showSeparator ? <div className={style.separator} /> : null}
             {showNewsletter ? <NewsletterBlog /> : null}
         </>

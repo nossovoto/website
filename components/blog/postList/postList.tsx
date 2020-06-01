@@ -49,25 +49,11 @@ const PostList: FC<IPostListProps> = ({ posts }) => {
   return (
     <div className={style.main}>
       <div className={style.list} >
-        {listPost.map((post, key) => {
-          let showSeparator = key + 1 < listPost.length
-          let showNewsletter = listPost.length < 4 && key + 1 === listPost.length
-          if (listPost.length > 3)
-            showNewsletter = key + 1 === Math.ceil(listPost.length / 2) - 1
-          if (showNewsletter) showSeparator = false
-          return <PostItemList
-            key={key}
-            post={post}
-            showSeparator={showSeparator}
-            showNewsletter={showNewsletter}
-          />
-        })}
+        {listPost.map((post, key, arr) =>
+          <PostItemList key={key} post={post} position={key} listPost={arr} />
+        )}
       </div>
-      <Pagination
-        count={numberOfPages}
-        page={page}
-        onChange={handlePageChange}
-        variant="outlined" />
+      <Pagination count={numberOfPages} page={page} onChange={handlePageChange} variant="outlined" />
     </div>
   )
 }

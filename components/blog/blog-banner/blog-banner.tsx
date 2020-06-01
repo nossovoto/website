@@ -11,7 +11,7 @@ const BlogBanner = () => {
     <div className={style.main}>
       <h1>Blog de política do nossovoto</h1>
       <div className={style.button_box}>
-        <span>Receba nossa <br /> newsletter semanal</span>
+        <span>Receba nossos<br />artigos em seu e-mail</span>
         <button onClick={handleClick}>
           Cadastre-se
         </button>
