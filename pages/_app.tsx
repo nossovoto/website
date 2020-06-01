@@ -7,10 +7,14 @@ import { isProductionEnv, isDevelopmentEnv } from "util/consts"
 import "public/styles/theme.scss"
 
 // Will be called once for every metric that has to be reported.
+// These metrics can be sent to any analytics service
 export function reportWebVitals(metric) {
-  // These metrics can be sent to any analytics service
-  // tslint:disable-next-line:no-console
-  console.log(metric)
+  const { name, value, id } = metric
+  if (isDevelopmentEnv)
+    // tslint:disable-next-line:no-console
+    console.log(metric)
+  else if (isProductionEnv)
+    gtag.webVitals(metric)
 }
 
 if (isProductionEnv)

@@ -14,7 +14,7 @@ const facebookProperties = (post: IPost, currentUrl: string) => {
     { property: "og:url", content: currentUrl },
     { property: "og:type", content: "article" },
     { property: "og:title", content: post.title },
-    { property: "og:description", content: post.text.substring(0, 230) },
+    { property: "og:description", content: post.description },
     { property: "og:image", content: post.thumbnail },
     { property: "og:locale", content: "pt_BR" }
   ]
@@ -50,15 +50,15 @@ const Post: NextPage<IPostProps> = ({ post }) => {
       <Head>
         <title>{post.title}</title>
         <meta name="keywords" content={post.keywords} key="keywords" />
-        <meta name="description" content={post.title} key="description" />
+        <meta name="description" content={post.description} key="description" />
         {facebookProperties(post, currentUrl).map(property => (
           <meta property={property.property} content={property.content} key={property.property} />
         ))}
       </Head>
       <BlogBanner />
       <PostContainer post={post} />
-      <NewsletterBlog withIcon />
       <Disqus url={currentUrl} identifier={post.slug} title={post.title} />
+      <NewsletterBlog withIcon />
     </>
   )
 }

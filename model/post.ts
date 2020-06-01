@@ -1,5 +1,6 @@
 export interface IPost {
     _id: number
+    description: string
     articles: []
     author: string
     author_link: string
