@@ -41,10 +41,10 @@ const NewsletterBlog: FC<INewsletterBlog> = ({ withIcon = false }) => {
             {withIcon && <NewsletterCellphoneIcon iconClass={style.icon} />}
             <div className={style.box}>
                 <div className={style.titulo}>
-                    {"inscreva-se em nossa lsita de e-mails".toUpperCase()}
+                    {"inscreva-se em nossa lista de e-mails".toUpperCase()}
                 </div>
                 <div className={style.sub_titulo}>
-                    receba nossos artigos sobre educação e política
+                    receba nossos artigos sobre educação política
                 </div>
                 <div className={style.input_box}>
                     <input
