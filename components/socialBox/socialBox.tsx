@@ -8,6 +8,7 @@ import RedditIcon from "icons/redditIcon"
 import TwitterIcon from "icons/twitterIcon"
 import CopylinkIcon from "icons/copylinkIcon"
 import FaceBookShare from "./useFacebookShare"
+import { NOSSOVOTO_URL } from "util/consts"
 import style from "./socialBox.module.scss"
 
 const generateLinks = (currentUrl) => {
@@ -23,7 +24,7 @@ const generateLinks = (currentUrl) => {
 const SocialBox = () => {
 
   const { asPath } = useRouter()
-  const currentUrl = URL + asPath
+  const currentUrl = NOSSOVOTO_URL + asPath
   const links = generateLinks(currentUrl)
   const [isCopied, setCopied] = useClipboard(currentUrl, { successDuration: 2000 })
 

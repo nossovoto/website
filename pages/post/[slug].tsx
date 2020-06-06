@@ -7,7 +7,9 @@ import BlogBanner from "components/blog/blog-banner/blog-banner"
 import PostContainer from "components/blog/post/post"
 import NewsletterBlog from 'components/blog/newsletterBlog/newsletterBlog'
 import Disqus from 'components/disqus/disqus'
-import { getPost, getPosts } from 'util/getPosts'
+import { NOSSOVOTO_URL } from '../../util/consts'
+import { getPost, getPosts } from '../../util/getPosts'
+import { replaceAccents } from '../../util/util'
 
 const facebookProperties = (post: IPost, currentUrl: string) => {
   return [
@@ -23,7 +25,7 @@ const facebookProperties = (post: IPost, currentUrl: string) => {
 const Post: NextPage<IPostProps> = ({ post }) => {
 
   const { asPath, isFallback, push } = useRouter()
-  const currentUrl = URL + asPath
+  const currentUrl = NOSSOVOTO_URL + asPath
 
   if (isFallback)
   {
@@ -57,7 +59,7 @@ const Post: NextPage<IPostProps> = ({ post }) => {
       </Head>
       <BlogBanner />
       <PostContainer post={post} />
-      <Disqus url={currentUrl} identifier={post.slug} title={post.title} />
+      <Disqus url={currentUrl} identifier={post.slug} title={replaceAccents(post.title)} />
       <NewsletterBlog withIcon />
     </>
   )

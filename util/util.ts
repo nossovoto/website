@@ -1,3 +1,23 @@
+export const replaceAccents = (str: string) => {
+  const ACCENTS = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž'
+  const NON_ACCENTS = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz"
+
+  const strAccents: string[] = str.split('')
+  const strAccentsOut: string[] = new Array()
+
+  const strAccentsLen: number = strAccents.length
+
+  for (let y = 0; y < strAccentsLen; y++)
+  {
+    if (ACCENTS.indexOf(strAccents[y]) !== -1)
+      strAccentsOut[y] = NON_ACCENTS.substr(ACCENTS.indexOf(strAccents[y]), 1)
+    else
+      strAccentsOut[y] = strAccents[y]
+  }
+  const newString: string = strAccentsOut.join('')
+  return newString
+}
+
 export function titleToSlug(title: string) {
   let str = String(title).toString()
   str = str.replace(/^\s+|\s+$/g, "") // trim

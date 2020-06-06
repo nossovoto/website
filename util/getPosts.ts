@@ -23,8 +23,8 @@ export async function getPosts(numberOfPosts?: number) {
 export async function getPost(slug: string) {
   try
   {
-    const URL = POST_API_URL + slug + "/visitor"
-    const response = await axios.get(URL, {
+    const url = POST_API_URL + slug + "/visitor"
+    const response = await axios.get(url, {
       httpsAgent: getUnauthorizedHttpAgent()
     })
     const data: IPostList = await Object.values(response.data)
