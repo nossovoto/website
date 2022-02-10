@@ -36,7 +36,7 @@
     "disqus-react": "^1.0.8",
     "draftjs-to-html": "^0.9.1",
     "next": "^9.4.4",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-facebook": "^8.1.4",
